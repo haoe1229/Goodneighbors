@@ -1,0 +1,2290 @@
+<html class="light bg-surface-container" lang="ko"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Good Neighbors - 좋은 변화를 위한 약속</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;600&amp;family=Plus+Jakarta+Sans:wght@600;700&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "primary": "#89A132",
+                      "primary-container": "#89A132",
+                      "on-primary-container": "#ffffff",
+                      "surface": "#fcf9f8",
+                      "on-surface": "#1c1b1b",
+                      "on-surface-variant": "#454838",
+                      "background": "#fcf9f8",
+                      "outline": "#767966",
+                      "outline-variant": "#c6c8b3",
+                      "surface-container": "#f0eded",
+                      "surface-container-low": "#f6f3f2",
+                      "surface-container-high": "#eae7e7",
+                      "surface-container-highest": "#e5e2e1",
+                      "inverse-surface": "#313030",
+                      "inverse-on-surface": "#f3f0ef"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "2xl": "1.5rem",
+                      "3xl": "2rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "margin-mobile": "20px",
+                      "section-gap-md": "80px",
+                      "unit": "8px",
+                      "gutter": "24px",
+                      "container-max": "1440px",
+                      "section-gap-lg": "120px"
+              },
+              "fontFamily": {
+                      "headline-md": ["Pretendard", "Plus Jakarta Sans", "sans-serif"],
+                      "display-lg": ["Pretendard", "Plus Jakarta Sans", "sans-serif"],
+                      "body-md": ["Pretendard", "Hanken Grotesk", "sans-serif"],
+                      "label-sm": ["Pretendard", "Hanken Grotesk", "sans-serif"]
+              }
+            },
+          },
+        }
+    </script>
+<style>
+@font-face {
+    font-family: 'Pretendard';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-Thin.woff2') format('woff2');
+    font-weight: 100;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Pretendard';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-ExtraLight.woff2') format('woff2');
+    font-weight: 200;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Pretendard';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-Light.woff2') format('woff2');
+    font-weight: 300;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Pretendard';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Pretendard';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-Medium.woff2') format('woff2');
+    font-weight: 500;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Pretendard';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-SemiBold.woff2') format('woff2');
+    font-weight: 600;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Pretendard';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Pretendard';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-ExtraBold.woff2') format('woff2');
+    font-weight: 800;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Pretendard';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-Black.woff2') format('woff2');
+    font-weight: 900;
+    font-display: swap;
+}
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+        .soft-shadow {
+            box-shadow: 0 20px 40px -10px rgba(74, 69, 64, 0.12);
+        }
+        .hide-scrollbar::-webkit-scrollbar { display: none; }
+        .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+        
+        /* Claymorphism 3D Icon Container */
+        .clay-icon-container {
+            width: 100px;
+            height: 100px;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #fcf9f8;
+            border-radius: 50%;
+        }
+        
+        /* Review card interaction (fixed width, buttons reveal on hover) */
+        .review-card-interactive {
+            width: 360px;
+            box-shadow: 0 12px 24px -10px rgba(0, 0, 0, 0.08), 0 4px 12px -5px rgba(0, 0, 0, 0.04);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .review-card-interactive:hover {
+            box-shadow: 0 20px 32px -8px rgba(93, 80, 75, 0.12), 0 8px 16px -6px rgba(93, 80, 75, 0.06);
+        }
+        .review-card-interactive .review-buttons {
+            opacity: 0;
+            max-height: 0;
+            overflow: hidden;
+            pointer-events: none;
+            transition: opacity 0.25s ease, max-height 0.25s ease, margin-top 0.25s ease;
+        }
+        .review-card-interactive:hover .review-buttons,
+        .review-card-interactive.initial-active .review-buttons {
+            opacity: 1;
+            max-height: 80px;
+            margin-top: 16px;
+            pointer-events: auto;
+        }
+        
+        /* GNB Dropdown Mega Menu Transition */
+        .menu_wrap {
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(10px);
+            transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s;
+            pointer-events: none;
+        }
+        .group:hover .menu_wrap {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+            pointer-events: auto;
+        }
+
+        /* Combined Carousel Accordion Layout */
+        .accordion-card {
+            width: 240px;
+            height: 240px; /* Small cards are vertical/square-ish, 240px height */
+            transition: width 0.4s cubic-bezier(0.25, 0.8, 0.25, 1), height 0.4s ease, background-color 0.4s ease, box-shadow 0.3s ease;
+        }
+        .accordion-card .active-content {
+            display: none;
+            opacity: 0;
+            transition: opacity 0.2s ease-in-out;
+        }
+        .accordion-card .inactive-content {
+            display: flex;
+            opacity: 1;
+            transition: opacity 0.2s ease-in-out;
+        }
+        .accordion-card.active {
+            width: 620px !important;
+            height: 380px !important; /* Active card is taller to hold description and bottom actions */
+            background-color: #EFF3E7 !important;
+            cursor: default;
+        }
+        .accordion-card.active .active-content {
+            display: flex !important;
+            opacity: 1;
+        }
+        .accordion-card.active .inactive-content {
+            display: none !important;
+            opacity: 0;
+        }
+        @media (max-width: 768px) {
+            .accordion-card {
+                width: 100% !important;
+                height: auto !important;
+                min-height: 200px;
+            }
+            .accordion-card.active {
+                width: 100% !important;
+                height: auto !important;
+            }
+            .accordion-card .active-content {
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 1.5rem;
+            }
+            .accordion-card .active-content .rounded-full {
+                margin-top: 1rem;
+                width: 120px;
+                height: 120px;
+                align-self: center;
+            }
+        }
+
+        /* Site Footer Styling */
+        .site-footer {
+            background-color: #f7f9f6;
+            color: #3b4238;
+            font-family: inherit;
+            border-top: 1px solid rgba(0,0,0,0.06);
+        }
+        .footer-top {
+            max-width: 1440px;
+            margin: 0 auto;
+            padding: 32px 48px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 24px;
+            border-bottom: 1px solid rgba(0,0,0,0.06);
+        }
+        .footer-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 16px 24px;
+        }
+        .footer-links a {
+            font-size: 16px;
+            font-weight: 500;
+            color: #4a5246;
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+        .footer-links a:hover {
+            color: #8EA837;
+        }
+        .footer-links a:nth-child(2) {
+            color: #2c7c3c; /* Highlight privacy policy */
+        }
+        .footer-sns {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+        .footer-sns .sns {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            background-color: #e6ebe3;
+            color: #555d50;
+            text-decoration: none;
+            transition: all 0.2s ease;
+        }
+        .footer-sns .sns svg {
+            width: 22px;
+            height: 22px;
+        }
+        .footer-sns .sns:hover {
+            background-color: #8EA837;
+            color: #ffffff;
+        }
+        .footer-main {
+            max-width: 1440px;
+            margin: 0 auto;
+            padding: 48px;
+            display: grid;
+            grid-template-columns: 1fr 340px;
+            gap: 64px;
+        }
+        .footer-info {
+            font-size: 14px;
+            color: #555d50;
+            line-height: 1.8;
+        }
+        .footer-logo {
+            height: 44px;
+            margin-bottom: 16px;
+            object-fit: contain;
+        }
+        .footer-info a {
+            color: inherit;
+            text-decoration: none;
+        }
+        .footer-info a:hover {
+            text-decoration: underline;
+        }
+        .footer-contact {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+        .app-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            height: 48px;
+            border-radius: 6px;
+            text-decoration: none;
+            background-color: #eef3eb;
+            color: #2b4514;
+            font-size: 14px;
+            font-weight: 700;
+            transition: all 0.2s ease;
+            width: 100%;
+        }
+        .app-btn:hover {
+            opacity: 0.9;
+        }
+        .app-btn-ico svg {
+            width: 16px;
+            height: 16px;
+        }
+        .footer-contact-title {
+            font-size: 14px;
+            font-weight: 700;
+            color: #3b4238;
+            margin-top: 12px;
+        }
+        .footer-tel-row {
+            display: flex;
+            gap: 12px;
+            width: 100%;
+        }
+        .footer-tel-item {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+            flex: 1;
+            background-color: #eef3eb;
+            padding: 14px 16px;
+            border-radius: 6px;
+        }
+        .footer-tel-label {
+            font-size: 13px;
+            font-weight: 500;
+            color: #727a6d;
+        }
+        .footer-tel {
+            font-size: 16px;
+            font-weight: 800;
+            color: #191919;
+        }
+        @media (max-width: 992px) {
+            .footer-main {
+                grid-template-columns: 1fr;
+                gap: 40px;
+                padding: 40px 24px;
+            }
+            .footer-top {
+                padding: 30px 24px;
+            }
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body-md antialiased overflow-x-hidden max-w-[1920px] mx-auto min-h-screen shadow-2xl">
+<!-- Top Navigation -->
+<header id="main-header" class="bg-white fixed top-0 w-full max-w-[1920px] left-0 right-0 mx-auto z-50 transition-all duration-300 border-b border-black/5 shadow-sm">
+  <!-- Top Utility Bar (로그인, 회원가입, 기부금 영수증) -->
+  <div class="bg-transparent hidden lg:block">
+    <div class="max-w-container-max mx-auto px-gutter h-9 flex justify-end items-center text-[15px] text-on-surface-variant/80 gap-3.5">
+      <a href="/member/login.gn" class="hover:text-primary transition-colors">로그인</a>
+      <span class="w-[1px] h-3.5 bg-black/10"></span>
+      <a href="/member/register/join.gn" class="hover:text-primary transition-colors">회원가입</a>
+      <span class="w-[1px] h-3.5 bg-black/10"></span>
+      <a href="/mypage/print/donation.gn" class="hover:text-primary transition-colors flex items-center gap-1 font-semibold text-[#89A230]"><span class="material-symbols-outlined text-[18px] leading-none">receipt_long</span>기부금 영수증</a>
+    </div>
+  </div>
+
+  <!-- Bottom Main Header Bar -->
+  <div class="flex justify-between items-center h-20 px-margin-mobile md:px-gutter max-w-container-max mx-auto relative">
+    <!-- Logos (Main brand logo + 35th Anniversary Event badge) -->
+    <div class="flex items-center gap-0">
+      <a href="/magazine/2026/02/magazine.gn" target="_blank" class="hidden sm:inline-block">
+        <img src="k2005K366.png" alt="좋은 이웃과 함께한 35년" class="w-[91px] h-[56px] object-contain"/>
+      </a>
+      <a class="flex items-center" href="/">
+        <img alt="Good Neighbors Logo" class="h-[36px] object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBNOZFiifYdhxnm00ER8zosxzGJ64uzzBV6BGnXyz4X_ih-9Qs_PADTAAA09Q5_kQi1wQOU3LJ11D4bx4tIIg9lI5-J0NDl3glZqACkRJcB639xlrpXSeHz2iG4OYyU3FyUvTM5xV-mJOEvbdMtjrap0FieHMjCGUSN60B5zHJKcj5exZQ9l222QheJY5GbAfPUgPQczYoYVXEm1gebcjSUoIYozywiTZFnvV4Yq5AF0f5oKv78bHQHZkiEfEPfJkrJBFMdVC-WJ7I"/>
+      </a>
+    </div>
+
+    <!-- Navigation Menu (Desktop) -->
+    <nav class="hidden lg:flex gap-16 items-center text-[20px] font-semibold text-on-surface-variant h-full">
+      
+      <!-- 1. 후원하기 -->
+      <div class="group h-full flex items-center">
+        <a class="hover:text-primary transition-colors py-7 h-full flex items-center" href="/support/index.gn">후원하기</a>
+        <!-- Mega Dropdown Menu -->
+        <div class="menu_wrap absolute top-full left-0 w-full bg-white/98 backdrop-blur-md shadow-[0_15px_30px_rgba(0,0,0,0.08)] border-t border-black/5 p-8 grid grid-cols-12 gap-8 z-50 text-left">
+          <div class="col-span-8 max-w-[800px] mx-auto grid grid-cols-3 gap-8">
+            <div>
+              <h4 class="font-bold text-[16px] text-on-surface mb-3 pb-2 border-b border-black/5">캠페인 및 결연</h4>
+              <ul class="space-y-2.5 text-[15px] font-normal text-on-surface-variant">
+                <li><a href="/support/campaign/1/campaignList.gn" class="hover:text-primary hover:font-medium transition-all">캠페인후원</a></li>
+                <li><a href="/support/relationship/one20.gn" class="hover:text-primary hover:font-medium transition-all">해외아동 1:1결연</a></li>
+                <li><a href="https://gni.kr/url/2025_navi_withyou.gn" class="hover:text-primary hover:font-medium transition-all">기념일 후원</a></li>
+              </ul>
+            </div>
+            <div>
+              <h4 class="font-bold text-[16px] text-on-surface mb-3 pb-2 border-b border-black/5">일반 및 사업후원</h4>
+              <ul class="space-y-2.5 text-[15px] font-normal text-on-surface-variant">
+                <li><a href="/support/business/koreachildrightsList.gn" class="hover:text-primary hover:font-medium transition-all">사업후원</a></li>
+                <li><a href="/support/once/once.gn" class="hover:text-primary hover:font-medium transition-all">일시후원</a></li>
+                <li><a href="/support/company/company.gn" class="hover:text-primary hover:font-medium transition-all">기업후원</a></li>
+              </ul>
+            </div>
+            <div>
+              <h4 class="font-bold text-[16px] text-on-surface mb-3 pb-2 border-b border-black/5">특별후원</h4>
+              <ul class="space-y-2.5 text-[15px] font-normal text-on-surface-variant">
+                <li><a href="/support/special/theneighbors/index.gn" class="hover:text-primary hover:font-medium transition-all">더네이버스클럽</a></li>
+                <li><a href="/support/special/honors/index.gn" class="hover:text-primary hover:font-medium transition-all">더네이버스아너스클럽</a></li>
+                <li><a href="/support/special/legacy/index.gn" class="hover:text-primary hover:font-medium transition-all">유산기부</a></li>
+                <li><a href="/support/special/theneighbors/respectList.gn" class="hover:text-primary hover:font-medium transition-all">특별회원 예우공간</a></li>
+                <li><a href="/support/special/project/projectList.gn" class="hover:text-primary hover:font-medium transition-all">특별후원 프로젝트</a></li>
+              </ul>
+            </div>
+          </div>
+          <!-- Side Banners -->
+          <div class="col-span-4 border-l border-black/5 pl-8 flex flex-col gap-4 max-w-[360px]">
+            <a href="/campaign/turn25b" class="flex items-center gap-3 p-2 rounded-[8px] hover:bg-black/[0.02] transition-all group/banner">
+              <img src="https://cdn.gni.kr/banner/202601/x6xR1zzAJ.jpg" alt="YOUR TURN" class="w-[90px] h-[60px] object-cover rounded-[6px]"/>
+              <div>
+                <span class="text-[12px] font-bold text-primary block">유어턴 캠페인</span>
+                <span class="text-[14px] text-on-surface font-medium leading-tight line-clamp-2">아이들의 터닝포인트</span>
+              </div>
+            </a>
+            <a href="/campaign/meal25" class="flex items-center gap-3 p-2 rounded-[8px] hover:bg-black/[0.02] transition-all group/banner">
+               <img src="https://cdn.gni.kr/banner/202606/nRWkPm3K7.jpg" alt="함께한끼" class="w-[90px] h-[60px] object-cover rounded-[6px]"/>
+               <div>
+                 <span class="text-[12px] font-bold text-primary block">국내위기가정지원</span>
+                 <span class="text-[14px] text-on-surface font-medium leading-tight line-clamp-2">함께한끼 캠페인</span>
+               </div>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- 2. 스토리 -->
+      <div class="group h-full flex items-center">
+        <a class="hover:text-primary transition-colors py-7 h-full flex items-center" href="/story/index.gn">스토리</a>
+        <!-- Mega Dropdown Menu -->
+        <div class="menu_wrap absolute top-full left-0 w-full bg-white/98 backdrop-blur-md shadow-[0_15px_30px_rgba(0,0,0,0.08)] border-t border-black/5 p-8 grid grid-cols-12 gap-8 z-50 text-left">
+          <div class="col-span-8 max-w-[800px] mx-auto grid grid-cols-3 gap-8">
+            <div>
+              <h4 class="font-bold text-[16px] text-on-surface mb-3 pb-2 border-b border-black/5">좋은 이웃 이야기</h4>
+              <ul class="space-y-2.5 text-[15px] font-normal text-on-surface-variant">
+                <li><a href="/story/storycast/1/index.gn" class="hover:text-primary hover:font-medium transition-all">스토리</a></li>
+                <li><a href="/story/feedback/1/index.gn" class="hover:text-primary hover:font-medium transition-all">결과보고</a></li>
+                <li><a href="/story/vod/1/index.gn" class="hover:text-primary hover:font-medium transition-all">영상보기</a></li>
+              </ul>
+            </div>
+            <div>
+              <h4 class="font-bold text-[16px] text-on-surface mb-3 pb-2 border-b border-black/5">소식 및 뉴스</h4>
+              <ul class="space-y-2.5 text-[15px] font-normal text-on-surface-variant">
+                <li><a href="/story/notice/1/index.gn" class="hover:text-primary hover:font-medium transition-all">공지/뉴스</a></li>
+                <li><a href="/story/magazine/1/index.gn" class="hover:text-primary hover:font-medium transition-all">소식지</a></li>
+                <li><a href="/story/newsletter/1/index.gn" class="hover:text-primary hover:font-medium transition-all">뉴스레터</a></li>
+                <li><a href="/story/archive/1/annualreport.gn" class="hover:text-primary hover:font-medium transition-all">자료실</a></li>
+              </ul>
+            </div>
+            <div>
+              <h4 class="font-bold text-[16px] text-on-surface mb-3 pb-2 border-b border-black/5">굿멤버스 라운지</h4>
+              <ul class="space-y-2.5 text-[15px] font-normal text-on-surface-variant">
+                <li><a href="/story/event.gn" class="hover:text-primary hover:font-medium transition-all">문화 이벤트</a></li>
+                <li><a href="/story/benefit.gn" class="hover:text-primary hover:font-medium transition-all">회원 혜택+</a></li>
+                <li><a href="/story/online_event.gn" class="hover:text-primary hover:font-medium transition-all">온라인 이벤트</a></li>
+                <li><a href="/story/membership.gn" class="hover:text-primary hover:font-medium transition-all">회원모임</a></li>
+              </ul>
+            </div>
+          </div>
+          <!-- Side Banners -->
+          <div class="col-span-4 border-l border-black/5 pl-8 flex flex-col gap-4 max-w-[360px]">
+            <a href="https://www.goodneighbors.kr/magazine/2026/02/magazine.gn" target="_blank" class="flex items-center gap-3 p-2 rounded-[8px] hover:bg-black/[0.02] transition-all group/banner">
+              <img src="https://cdn.gni.kr/banner/202602/EqVqEOWGK.png" alt="좋은 이웃 소식지" class="w-[90px] h-[60px] object-cover rounded-[6px]"/>
+              <div>
+                <span class="text-[12px] font-bold text-primary block">겨울호 소식지</span>
+                <span class="text-[14px] text-on-surface font-medium leading-tight line-clamp-2">좋은 이웃 소식지 겨울호</span>
+              </div>
+            </a>
+            <a href="/url/2025navistory_letsbegin.gn" class="flex items-center gap-3 p-2 rounded-[8px] hover:bg-black/[0.02] transition-all group/banner">
+              <img src="https://cdn.gni.kr/banner/202510/Brj5zj162.png" alt="Let's Begin" class="w-[90px] h-[60px] object-cover rounded-[6px]"/>
+              <div>
+                <span class="text-[12px] font-bold text-primary block">시작 캠페인</span>
+                <span class="text-[14px] text-on-surface font-medium leading-tight line-clamp-2">Let's Begin 캠페인</span>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- 3. 기관소개 -->
+      <div class="group h-full flex items-center">
+        <a class="hover:text-primary transition-colors py-7 h-full flex items-center" href="/goodneighbors/index.gn">기관소개</a>
+        <!-- Mega Dropdown Menu -->
+        <div class="menu_wrap absolute top-full left-0 w-full bg-white/98 backdrop-blur-md shadow-[0_15px_30px_rgba(0,0,0,0.08)] border-t border-black/5 p-8 grid grid-cols-12 gap-8 z-50 text-left">
+          <div class="col-span-8 max-w-[800px] mx-auto grid grid-cols-3 gap-8">
+            <div>
+              <h4 class="font-bold text-[16px] text-on-surface mb-3 pb-2 border-b border-black/5">소개 및 정신</h4>
+              <ul class="space-y-2.5 text-[15px] font-normal text-on-surface-variant">
+                <li><a href="/goodneighbors/index.gn" class="hover:text-primary hover:font-medium transition-all">기관소개</a></li>
+                <li><a href="/goodneighbors/introduction/mission.gn" class="hover:text-primary hover:font-medium transition-all">굿네이버스 정신</a></li>
+                <li><a href="/goodneighbors/introduction/ci.gn" class="hover:text-primary hover:font-medium transition-all">CI 및 슬로건</a></li>
+                <li><a href="/goodneighbors/introduction/history.gn" class="hover:text-primary hover:font-medium transition-all">연혁</a></li>
+              </ul>
+            </div>
+            <div>
+              <h4 class="font-bold text-[16px] text-on-surface mb-3 pb-2 border-b border-black/5">경영 및 운영</h4>
+              <ul class="space-y-2.5 text-[15px] font-normal text-on-surface-variant">
+                <li><a href="/goodneighbors/management/transparency.gn" class="hover:text-primary hover:font-medium transition-all">굿네이버스 투명경영</a></li>
+                <li><a href="/goodneighbors/management/finance.gn" class="hover:text-primary hover:font-medium transition-all">재정보고</a></li>
+                <li><a href="/goodneighbors/management/standard.gn" class="hover:text-primary hover:font-medium transition-all">투명경영기준</a></li>
+                <li><a href="/goodneighbors/management/organization.gn" class="hover:text-primary hover:font-medium transition-all">조직운영</a></li>
+              </ul>
+            </div>
+            <div>
+              <h4 class="font-bold text-[16px] text-on-surface mb-3 pb-2 border-b border-black/5">조직 및 이사회</h4>
+              <ul class="space-y-2.5 text-[15px] font-normal text-on-surface-variant">
+                <li><a href="/goodneighbors/organization/global.gn" class="hover:text-primary hover:font-medium transition-all">글로벌 굿네이버스</a></li>
+                <li><a href="/goodneighbors/organization/corporation.gn" class="hover:text-primary hover:font-medium transition-all">국내 조직현황</a></li>
+                <li><a href="/gnsponsor/index.gn" class="hover:text-primary hover:font-medium transition-all">굿네이버스 후원운영이사회</a></li>
+                <li><a href="/goodneighbors/introduction/ambassador.gn" class="hover:text-primary hover:font-medium transition-all">굿네이버스 친선사절단</a></li>
+              </ul>
+            </div>
+          </div>
+          <!-- Side Banners -->
+          <div class="col-span-4 border-l border-black/5 pl-8 flex flex-col gap-4 max-w-[360px]">
+            <a href="https://goodneighbors.recruiter.co.kr/appsite/company/index" class="flex items-center gap-3 p-2 rounded-[8px] hover:bg-black/[0.02] transition-all group/banner">
+              <img src="https://cdn.gni.kr/banner/202110/yDDQgq4bA.jpg" alt="인재채용" class="w-[90px] h-[60px] object-cover rounded-[6px]"/>
+              <div>
+                <span class="text-[12px] font-bold text-primary block">채용 안내</span>
+                <span class="text-[14px] text-on-surface font-medium leading-tight line-clamp-2">굿네이버스 인재채용</span>
+              </div>
+            </a>
+            <a href="/goodneighbors/introduction/ambassador.gn" class="flex items-center gap-3 p-2 rounded-[8px] hover:bg-black/[0.02] transition-all group/banner">
+              <img src="https://cdn.gni.kr/banner/202110/6gg1xKmo0.jpg" alt="친선사절단" class="w-[90px] h-[60px] object-cover rounded-[6px]"/>
+              <div>
+                <span class="text-[12px] font-bold text-primary block">홍보대사</span>
+                <span class="text-[14px] text-on-surface font-medium leading-tight line-clamp-2">굿네이버스 친선사절단</span>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- 4. 사업안내 -->
+      <div class="group h-full flex items-center">
+        <a class="hover:text-primary transition-colors py-7 h-full flex items-center" href="/business/index.gn">사업안내</a>
+        <!-- Mega Dropdown Menu -->
+        <div class="menu_wrap absolute top-full left-0 w-full bg-white/98 backdrop-blur-md shadow-[0_15px_30px_rgba(0,0,0,0.08)] border-t border-black/5 p-8 grid grid-cols-12 gap-8 z-50 text-left">
+          <div class="col-span-8 max-w-[800px] mx-auto grid grid-cols-3 gap-8">
+            <div>
+              <h4 class="font-bold text-[16px] text-on-surface mb-3 pb-2 border-b border-black/5">국제개발협력사업</h4>
+              <ul class="space-y-2.5 text-[15px] font-normal text-on-surface-variant">
+                <li><a href="/business/global_relief/community.gn" class="hover:text-primary hover:font-medium transition-all">지역개발사업</a></li>
+                <li><a href="/business/global_relief/relieflocal.gn" class="hover:text-primary hover:font-medium transition-all">교육보호</a></li>
+                <li><a href="/business/global_relief/healthcare.gn" class="hover:text-primary hover:font-medium transition-all">보건의료</a></li>
+                <li><a href="/business/global_relief/water.gn" class="hover:text-primary hover:font-medium transition-all">식수위생</a></li>
+                <li><a href="/business/global_relief/income.gn" class="hover:text-primary hover:font-medium transition-all">소득증대</a></li>
+                <li><a href="/business/global_relief/rightsprotect.gn" class="hover:text-primary hover:font-medium transition-all">권리옹호</a></li>
+                <li><a href="/business/global_relief/emergency.gn" class="hover:text-primary hover:font-medium transition-all">인도적지원</a></li>
+              </ul>
+            </div>
+            <div>
+              <h4 class="font-bold text-[16px] text-on-surface mb-3 pb-2 border-b border-black/5">국내전문복지사업</h4>
+              <ul class="space-y-2.5 text-[15px] font-normal text-on-surface-variant">
+                <li><a href="/business/korea_welfare/childcare.gn" class="hover:text-primary hover:font-medium transition-all">학대피해아동보호 및 예방</a></li>
+                <li><a href="/business/korea_welfare/crisis.gn" class="hover:text-primary hover:font-medium transition-all">위기가정아동지원</a></li>
+                <li><a href="/business/korea_welfare/psychoemotional.gn" class="hover:text-primary hover:font-medium transition-all">아동건강지원</a></li>
+                <li><a href="/business/korea_welfare/empowerment.gn" class="hover:text-primary hover:font-medium transition-all">미래성장 및 자립지원</a></li>
+                <li><a href="/business/korea_welfare/advocacy.gn" class="hover:text-primary hover:font-medium transition-all">아동권리옹호</a></li>
+                <li><a href="/business/korea_welfare/community.gn" class="hover:text-primary hover:font-medium transition-all">지역사회복지지원</a></li>
+              </ul>
+            </div>
+            <div>
+              <h4 class="font-bold text-[16px] text-on-surface mb-3 pb-2 border-b border-black/5">캠페인 및 연구</h4>
+              <ul class="space-y-2.5 text-[15px] font-normal text-on-surface-variant">
+                <li><a href="https://hope.gni.kr/2026/hopeletter.gn" class="hover:text-primary hover:font-medium transition-all">희망편지쓰기대회</a></li>
+                <li><a href="https://hope.gni.kr/2026/familyletter.gn" class="hover:text-primary hover:font-medium transition-all">가족그림편지쓰기대회</a></li>
+                <li><a href="/business/north_korea/northkorea.gn" class="hover:text-primary hover:font-medium transition-all">대북지원사업</a></li>
+                <li><a href="/business/research/index.gn" class="hover:text-primary hover:font-medium transition-all">아동권리연구소</a></li>
+              </ul>
+            </div>
+          </div>
+          <!-- Side Banners -->
+          <div class="col-span-4 border-l border-black/5 pl-8 flex flex-col gap-4 max-w-[360px]">
+            <a href="https://hope.gni.kr/2026/hopeletter.gn" class="flex items-center gap-3 p-2 rounded-[8px] hover:bg-black/[0.02] transition-all group/banner">
+              <img src="https://cdn.gni.kr/banner/202602/Og0EG6mpL.png" alt="희망편지쓰기대회" class="w-[90px] h-[60px] object-cover rounded-[6px]"/>
+              <div>
+                <span class="text-[12px] font-bold text-primary block">편지쓰기대회</span>
+                <span class="text-[14px] text-on-surface font-medium leading-tight line-clamp-2">2026 희망편지쓰기대회</span>
+              </div>
+            </a>
+            <a href="https://www.goodneighbors.kr/cmmn/url/25ar_banner.gn" target="_blank" class="flex items-center gap-3 p-2 rounded-[8px] hover:bg-black/[0.02] transition-all group/banner">
+              <img src="https://cdn.gni.kr/banner/202605/z6gXOgWEZ.jpg" alt="연차보고" class="w-[90px] h-[60px] object-cover rounded-[6px]"/>
+              <div>
+                <span class="text-[12px] font-bold text-primary block">연차보고</span>
+                <span class="text-[14px] text-on-surface font-medium leading-tight line-clamp-2">2025 굿네이버스 연차보고</span>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- 5. 나의후원 -->
+      <div class="group h-full flex items-center">
+        <a class="hover:text-primary transition-colors py-7 h-full flex items-center" href="/mypage/index.gn">나의후원</a>
+        <!-- Mega Dropdown Menu -->
+        <div class="menu_wrap absolute top-full left-0 w-full bg-white/98 backdrop-blur-md shadow-[0_15px_30px_rgba(0,0,0,0.08)] border-t border-black/5 p-8 grid grid-cols-12 gap-8 z-50 text-left">
+          <div class="col-span-8 max-w-[800px] mx-auto grid grid-cols-4 gap-6">
+            <div>
+              <h4 class="font-bold text-[16px] text-on-surface mb-3 pb-2 border-b border-black/5">나의 후원정보</h4>
+              <ul class="space-y-2.5 text-[15px] font-normal text-on-surface-variant">
+                <li><a href="/mypage/my_support/mysupport.gn" class="hover:text-primary hover:font-medium transition-all">후원내용확인/변경</a></li>
+                <li><a href="/mypage/my_support/checkhistory.gn" class="hover:text-primary hover:font-medium transition-all">후원회비내역조회</a></li>
+                <li><a href="/mypage/my_support/paymentchange.gn" class="hover:text-primary hover:font-medium transition-all">납부방법확인/변경</a></li>
+              </ul>
+            </div>
+            <div>
+              <h4 class="font-bold text-[16px] text-on-surface mb-3 pb-2 border-b border-black/5">나의 결연아동</h4>
+              <ul class="space-y-2.5 text-[15px] font-normal text-on-surface-variant">
+                <li><a href="/mypage/mychild/mychild.gn" class="hover:text-primary hover:font-medium transition-all">아동정보확인</a></li>
+                <li><a href="/mypage/mychild/gift.gn" class="hover:text-primary hover:font-medium transition-all">선물금 보내기</a></li>
+                <li><a href="/mypage/mychild/sendpost.gn" class="hover:text-primary hover:font-medium transition-all">편지보내기</a></li>
+                <li><a href="/mypage/mychild/postbox.gn" class="hover:text-primary hover:font-medium transition-all">편지함</a></li>
+              </ul>
+            </div>
+            <div>
+              <h4 class="font-bold text-[16px] text-on-surface mb-3 pb-2 border-b border-black/5">회원 참여</h4>
+              <ul class="space-y-2.5 text-[15px] font-normal text-on-surface-variant">
+                <li><a href="/mypage/member/modify.gn" class="hover:text-primary hover:font-medium transition-all">개인정보변경</a></li>
+                <li><a href="/mypage/join_history/eventhistory.gn" class="hover:text-primary hover:font-medium transition-all">나의 참여 내역</a></li>
+                <li><a href="/community/guide/supporter.gn" class="hover:text-primary hover:font-medium transition-all">후원 가이드</a></li>
+              </ul>
+            </div>
+            <div>
+              <h4 class="font-bold text-[16px] text-on-surface mb-3 pb-2 border-b border-black/5">증명서 및 문의</h4>
+              <ul class="space-y-2.5 text-[15px] font-normal text-on-surface-variant">
+                <li><a href="/mypage/print/donation.gn" class="hover:text-primary hover:font-medium transition-all font-semibold text-[#89A230]">기부금영수증</a></li>
+                <li><a href="/mypage/qna/qnaform.gn?page=1" class="hover:text-primary hover:font-medium transition-all">1:1 문의하기</a></li>
+                <li><a href="/etc/faq/1/list.gn" class="hover:text-primary hover:font-medium transition-all">FAQ</a></li>
+              </ul>
+            </div>
+          </div>
+          <!-- Side Banners -->
+          <div class="col-span-4 border-l border-black/5 pl-8 flex flex-col gap-4 max-w-[360px]">
+            <a href="https://gni.kr/url/2025navistory_withyou.gn" target="_blank" class="flex items-center gap-3 p-2 rounded-[8px] hover:bg-black/[0.02] transition-all group/banner">
+              <img src="https://cdn.gni.kr/banner/202606/Vvzr3k7mB.png" alt="With You" class="w-[90px] h-[60px] object-cover rounded-[6px]"/>
+              <div>
+                <span class="text-[12px] font-bold text-primary block">With You 캠페인</span>
+                <span class="text-[14px] text-on-surface font-medium leading-tight line-clamp-2">좋은 이웃 이야기</span>
+              </div>
+            </a>
+            <a href="https://gni.kr/url/2025navistory_letsbegin.gn" target="_blank" class="flex items-center gap-3 p-2 rounded-[8px] hover:bg-black/[0.02] transition-all group/banner">
+              <img src="https://cdn.gni.kr/banner/202606/MZng3A8WP.png" alt="Let's Begin" class="w-[90px] h-[60px] object-cover rounded-[6px]"/>
+              <div>
+                <span class="text-[12px] font-bold text-primary block">Let's Begin</span>
+                <span class="text-[14px] text-on-surface font-medium leading-tight line-clamp-2">아동 권리 옹호 캠페인</span>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Right Side Actions (Desktop + Mobile Search / Menu) -->
+    <div class="flex items-center gap-4">
+      <a href="/etc/search.gn" class="text-on-surface p-2 flex items-center justify-center hover:text-primary transition-colors"><span class="material-symbols-outlined text-[36px]">search</span></a>
+      <a href="/support_pay/regular.gn?campaignCode=338&amp;mainRef=Y&amp;mainbiz=5" class="bg-[#89A230] text-white px-6 py-2.5 rounded-[8px] font-bold text-[18px] hover:bg-[#7D942E] transition-all shadow-md">바로후원하기</a>
+      <button class="lg:hidden text-on-surface"><span class="material-symbols-outlined">menu</span></button>
+    </div>
+  </div>
+</header>
+<!-- 1. Hero Section + Donor Quick Menu -->
+<section class="relative pt-20 lg:pt-[116px] bg-white">
+<div class="relative h-[720px] overflow-hidden">
+  <!-- Sliding Wrapper -->
+  <div id="hero-slider" class="flex w-[500%] h-full transition-transform duration-700 ease-in-out">
+    
+    <!-- Slide 1 -->
+    <div class="w-1/5 h-full relative flex-shrink-0">
+      <img alt="Hero Background 1" class="absolute inset-0 w-full h-full object-cover" src="Y7D6v3xx2.jpg"/>
+      <div class="absolute inset-0 bg-gradient-to-r from-black/60 via-black/20 to-transparent"></div>
+      <div class="absolute inset-0 flex flex-col justify-center px-margin-mobile md:px-gutter max-w-container-max mx-auto text-white">
+        <div class="max-w-2xl">
+          <span class="inline-block bg-transparent border border-white/40 text-white font-label-sm px-5 py-2 rounded-full mb-6 tracking-wide">국내 위기가정지원 캠페인</span>
+          <h1 class="text-4xl md:text-6xl font-bold mb-6 leading-[1.45]">16살 연서의 불안한 시간</h1>
+          <p class="text-lg md:text-xl text-white/90 mb-10 max-w-lg leading-relaxed">아픈 할머니와 사는 연서가 홀로 무거운 짐을 지지 않도록<br/>지금 좋은 이웃이 되어주세요.</p>
+          <div class="flex flex-col gap-6">
+            <button class="bg-primary text-white px-10 py-4 rounded-full font-bold hover:opacity-90 transition-all shadow-lg flex items-center gap-3 w-fit">
+              자세히 보기 <span class="material-symbols-outlined text-lg">arrow_forward</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Slide 2 -->
+    <div class="w-1/5 h-full relative flex-shrink-0">
+      <img alt="Hero Background 2" class="absolute inset-0 w-full h-full object-cover" src="mq92795rr.jpg"/>
+      <div class="absolute inset-0 bg-gradient-to-r from-black/60 via-black/20 to-transparent"></div>
+      <div class="absolute inset-0 flex flex-col justify-center px-margin-mobile md:px-gutter max-w-container-max mx-auto text-white">
+        <div class="max-w-2xl">
+          <span class="inline-block bg-transparent border border-white/40 text-white font-label-sm px-5 py-2 rounded-full mb-6 tracking-wide">캠페인</span>
+          <h1 class="text-4xl md:text-6xl font-bold mb-6 leading-[1.45]">배우 김명수와 함께하는 선 넘는 좋은 일</h1>
+          <p class="text-lg md:text-xl text-white/90 mb-10 max-w-lg leading-relaxed">배우 김명수와 좋은 이웃들이 함께 만들어가는<br/>세상에 선을 넘는 따뜻한 변화를 지금 함께해주세요.</p>
+          <div class="flex flex-col gap-6">
+            <button class="bg-primary text-white px-10 py-4 rounded-full font-bold hover:opacity-90 transition-all shadow-lg flex items-center gap-3 w-fit">
+              자세히 보기 <span class="material-symbols-outlined text-lg">arrow_forward</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Slide 3 -->
+    <div class="w-1/5 h-full relative flex-shrink-0">
+      <img alt="Hero Background 3" class="absolute inset-0 w-full h-full object-cover" src="https://images.unsplash.com/photo-1542810634-71277d95dcbb?w=1600&q=80"/>
+      <div class="absolute inset-0 bg-gradient-to-r from-black/60 via-black/20 to-transparent"></div>
+      <div class="absolute inset-0 flex flex-col justify-center px-margin-mobile md:px-gutter max-w-container-max mx-auto text-white">
+        <div class="max-w-2xl">
+          <span class="inline-block bg-transparent border border-white/40 text-white font-label-sm px-5 py-2 rounded-full mb-6 tracking-wide">보건 및 식수위생 캠페인</span>
+          <h1 class="text-4xl md:text-6xl font-bold mb-6 leading-[1.45]">따뜻한 밥 한끼의 기적</h1>
+          <p class="text-lg md:text-xl text-white/90 mb-10 max-w-lg leading-relaxed">결식 위험에 처한 소외계층 아동들에게<br/>매일 건강한 식사를 선물해주세요.</p>
+          <div class="flex flex-col gap-6">
+            <button class="bg-primary text-white px-10 py-4 rounded-full font-bold hover:opacity-90 transition-all shadow-lg flex items-center gap-3 w-fit">
+              자세히 보기 <span class="material-symbols-outlined text-lg">arrow_forward</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Slide 4 -->
+    <div class="w-1/5 h-full relative flex-shrink-0">
+      <img alt="Hero Background 4" class="absolute inset-0 w-full h-full object-cover" src="https://images.unsplash.com/photo-1497633762265-9d179a990aa6?w=1600&q=80"/>
+      <div class="absolute inset-0 bg-gradient-to-r from-black/60 via-black/20 to-transparent"></div>
+      <div class="absolute inset-0 flex flex-col justify-center px-margin-mobile md:px-gutter max-w-container-max mx-auto text-white">
+        <div class="max-w-2xl">
+          <span class="inline-block bg-transparent border border-white/40 text-white font-label-sm px-5 py-2 rounded-full mb-6 tracking-wide">아동 교육 권리 캠페인</span>
+          <h1 class="text-4xl md:text-6xl font-bold mb-6 leading-[1.45]">지속가능한 교육 환경 구축</h1>
+          <p class="text-lg md:text-xl text-white/90 mb-10 max-w-lg leading-relaxed">모든 아동이 배움의 기회를 누리고<br/>스스로 자립할 수 있도록 교육을 지원합니다.</p>
+          <div class="flex flex-col gap-6">
+            <button class="bg-primary text-white px-10 py-4 rounded-full font-bold hover:opacity-90 transition-all shadow-lg flex items-center gap-3 w-fit">
+              자세히 보기 <span class="material-symbols-outlined text-lg">arrow_forward</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Slide 5 -->
+    <div class="w-1/5 h-full relative flex-shrink-0">
+      <img alt="Hero Background 5" class="absolute inset-0 w-full h-full object-cover" src="https://images.unsplash.com/photo-1469571486090-7db55385ba8c?w=1600&q=80"/>
+      <div class="absolute inset-0 bg-gradient-to-r from-black/60 via-black/20 to-transparent"></div>
+      <div class="absolute inset-0 flex flex-col justify-center px-margin-mobile md:px-gutter max-w-container-max mx-auto text-white">
+        <div class="max-w-2xl">
+          <span class="inline-block bg-transparent border border-white/40 text-white font-label-sm px-5 py-2 rounded-full mb-6 tracking-wide">지역사회 자립 캠페인</span>
+          <h1 class="text-4xl md:text-6xl font-bold mb-6 leading-[1.45]">함께 만드는 자립의 기적</h1>
+          <p class="text-lg md:text-xl text-white/90 mb-10 max-w-lg leading-relaxed">지역사회가 식수위생을 개선하고<br/>스스로 자립할 수 있는 힘을 기르도록 돕습니다.</p>
+          <div class="flex flex-col gap-6">
+            <button class="bg-primary text-white px-10 py-4 rounded-full font-bold hover:opacity-90 transition-all shadow-lg flex items-center gap-3 w-fit">
+              자세히 보기 <span class="material-symbols-outlined text-lg">arrow_forward</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Absolute overlaid indicator dots (restored to overlay position, compact w-2.5 h-2.5, right above the quick menu) -->
+  <div class="absolute bottom-28 left-0 right-0 z-30 pointer-events-none">
+    <div class="max-w-container-max mx-auto px-margin-mobile md:px-gutter w-full">
+      <div id="hero-dots" class="flex gap-2 pl-2 pointer-events-auto">
+        <span onclick="goToHeroSlide(0)" class="w-2.5 h-2.5 rounded-full bg-white cursor-pointer transition-all duration-300 shadow-sm"></span>
+        <span onclick="goToHeroSlide(1)" class="w-2.5 h-2.5 rounded-full bg-white/40 hover:bg-white/70 cursor-pointer transition-all duration-300 shadow-sm"></span>
+        <span onclick="goToHeroSlide(2)" class="w-2.5 h-2.5 rounded-full bg-white/40 hover:bg-white/70 cursor-pointer transition-all duration-300 shadow-sm"></span>
+        <span onclick="goToHeroSlide(3)" class="w-2.5 h-2.5 rounded-full bg-white/40 hover:bg-white/70 cursor-pointer transition-all duration-300 shadow-sm"></span>
+        <span onclick="goToHeroSlide(4)" class="w-2.5 h-2.5 rounded-full bg-white/40 hover:bg-white/70 cursor-pointer transition-all duration-300 shadow-sm"></span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  let currentIndex = 0;
+  let autoSlideInterval;
+
+  document.addEventListener("DOMContentLoaded", function() {
+    startAutoSlide();
+    startQuickMenuRotation();
+  });
+
+  function showSlide(index) {
+    currentIndex = index;
+    const heroSlider = document.getElementById("hero-slider");
+    heroSlider.style.transform = `translateX(-${currentIndex * 20}%)`;
+    
+    // Update dots on absolute overlay container
+    const dots = document.querySelectorAll("#hero-dots span");
+    dots.forEach((dot, dIdx) => {
+      if (dIdx === currentIndex) {
+        dot.className = "w-2.5 h-2.5 rounded-full bg-white cursor-pointer transition-all duration-300 shadow-sm";
+      } else {
+        dot.className = "w-2.5 h-2.5 rounded-full bg-white/40 hover:bg-white/70 cursor-pointer transition-all duration-300 shadow-sm";
+      }
+    });
+  }
+
+  function startAutoSlide() {
+    autoSlideInterval = setInterval(() => {
+      let nextIndex = (currentIndex + 1) % 5;
+      showSlide(nextIndex);
+    }, 5000);
+  }
+
+  window.goToHeroSlide = function(index) {
+    clearInterval(autoSlideInterval);
+    showSlide(index);
+    startAutoSlide();
+  };
+
+  function startQuickMenuRotation() {
+    const messages = [
+      { text: '<span class="font-bold text-[#89A230]">월 3만원</span>이면 <span class="font-bold">아동의 식사, 의료, 교육 등</span> 일상을 지킬 수 있습니다.', icon: 'volunteer_activism' },
+      { text: '<span class="font-bold text-[#89A230]">월 5만원</span>이면 <span class="font-bold">식수 정수 시설을 설치</span>하여 깨끗한 물을 선물할 수 있습니다.', icon: 'water_drop' },
+      { text: '<span class="font-bold text-[#89A230]">월 10만원</span>이면 <span class="font-bold">위기가정 아동들이 걱정 없이</span> 전문 교육을 받을 수 있습니다.', icon: 'school' },
+      { text: '<span class="font-bold text-[#89A230]">월 2만원</span>이면 <span class="font-bold">아동들의 몸과 마음이 모두 건강한</span> 영양식을 제공합니다.', icon: 'cookie' }
+    ];
+    let msgIndex = 0;
+    const qIcon = document.getElementById("quick-menu-icon");
+    const qText = document.getElementById("quick-menu-text");
+    const qIconInner = document.getElementById("quick-menu-icon-inner");
+    const qTextInner = document.getElementById("quick-menu-text-inner");
+
+    setInterval(() => {
+      // 3D dice rotation animation trigger (Rotate X up by 90deg to hide)
+      qIconInner.style.transform = "rotateX(90deg) translateY(-20px)";
+      qIconInner.style.opacity = "0";
+      qTextInner.style.transform = "rotateX(90deg) translateY(-20px)";
+      qTextInner.style.opacity = "0";
+
+      setTimeout(() => {
+        msgIndex = (msgIndex + 1) % messages.length;
+        qIcon.textContent = messages[msgIndex].icon;
+        qText.innerHTML = messages[msgIndex].text;
+
+        // Position at -90deg bottom for entry roll up
+        qIconInner.style.transform = "rotateX(-90deg) translateY(20px)";
+        qTextInner.style.transform = "rotateX(-90deg) translateY(20px)";
+        
+        // Force reflow
+        qIconInner.offsetHeight;
+
+        // Animate back to flat/visible
+        qIconInner.style.transform = "rotateX(0deg) translateY(0px)";
+        qIconInner.style.opacity = "1";
+        qTextInner.style.transform = "rotateX(0deg) translateY(0px)";
+        qTextInner.style.opacity = "1";
+      }, 350);
+    }, 4000);
+  }
+</script>
+<!-- Donor Quick Menu Overlay -->
+<div class="relative -mt-20 mx-auto max-w-container-max z-20 px-margin-mobile md:px-gutter">
+<div class="bg-white rounded-[8px] p-6 md:p-8 soft-shadow border border-black/5 flex flex-col lg:flex-row items-center justify-between gap-6 text-on-surface">
+<div class="flex items-center gap-5 lg:max-w-[55%] w-full lg:w-auto">
+  <!-- Olive line icon (90px) with 3D perspective wrapper -->
+  <div class="flex-shrink-0 text-[#89A230] select-none" style="perspective: 400px;">
+    <div id="quick-menu-icon-inner" class="transition-all duration-300 ease-out origin-center" style="transform-style: preserve-3d;">
+      <span id="quick-menu-icon" class="material-symbols-outlined text-[90px] leading-none" style="font-variation-settings: 'wght' 100;">volunteer_activism</span>
+    </div>
+  </div>
+  <div class="flex flex-col justify-center">
+    <h3 class="text-[28px] font-bold mb-1 text-on-surface leading-tight">원하는 금액으로 후원에 함께해요</h3>
+    <div class="h-[54px] flex items-center overflow-hidden" style="perspective: 400px;">
+      <div id="quick-menu-text-inner" class="transition-all duration-300 ease-out origin-center w-full" style="transform-style: preserve-3d;">
+        <p id="quick-menu-text" class="text-on-surface-variant text-[18px] leading-relaxed"><span class="font-bold text-[#89A230]">월 3만원</span>이면 <span class="font-bold">아동의 식사, 의료, 교육 등</span> 일상을 지킬 수 있습니다.</p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="flex flex-nowrap justify-center lg:justify-end items-center gap-3 w-full lg:w-auto overflow-x-auto hide-scrollbar">
+<button class="bg-transparent hover:bg-primary/10 hover:text-primary hover:border-primary px-5 py-3 rounded-[8px] text-[18px] font-bold border border-outline-variant text-on-surface-variant transition-all whitespace-nowrap">3만원</button>
+<button class="bg-transparent hover:bg-primary/10 hover:text-primary hover:border-primary px-5 py-3 rounded-[8px] text-[18px] font-bold border border-outline-variant text-on-surface-variant transition-all whitespace-nowrap">5만원</button>
+<button class="bg-transparent hover:bg-primary/10 hover:text-primary hover:border-primary px-5 py-3 rounded-[8px] text-[18px] font-bold border border-outline-variant text-on-surface-variant transition-all whitespace-nowrap">10만원</button>
+<input class="bg-transparent border border-outline-variant text-on-surface placeholder-on-surface-variant/50 px-5 py-3 rounded-[8px] text-[18px] placeholder:text-[18px] w-36 focus:ring-2 focus:ring-primary/50 focus:bg-white transition-all outline-none" placeholder="직접 입력" type="text"/>
+<button class="bg-primary text-white px-8 py-3 rounded-[8px] text-[18px] font-bold hover:opacity-90 transition-all shadow-md whitespace-nowrap">후원하기</button>
+</div>
+</div>
+</div>
+<!-- Spacer for 120px white background below Quick Menu -->
+<div class="h-[120px] bg-white"></div>
+</section>
+<!-- 2. Trust Section (Impact Stats Redesigned Layout) -->
+<section class="relative py-[120px] overflow-hidden bg-white -mt-[100px] z-20">
+  <!-- Entire Section Background Image (com_img2.png) with linear gradient opacity mask (using CSS inline style with webkit-mask-image) -->
+  <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('com_img2.png'); -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%); mask-image: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%);"></div>
+  <!-- Soft brand olive color overlay tinted on top of the section background, fading in with it -->
+  <div class="absolute inset-0 bg-[#89A230]/20 pointer-events-none" style="-webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%); mask-image: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%);"></div>
+
+<div class="relative z-10 max-w-container-max mx-auto px-margin-mobile md:px-gutter">
+  <div class="text-center mb-[94px]">
+    <h2 class="text-[48px] font-bold text-on-surface leading-tight mb-6">
+      35년 동안의 좋은 변화<br/>
+      <span class="text-[48px] font-bold text-on-surface">투명성과 신뢰로 증명합니다</span>
+    </h2>
+    <div class="flex justify-center gap-4">
+      <a href="#" class="bg-[#89A230] text-white hover:bg-[#7A9128] px-8 py-3.5 rounded-full font-bold text-[18px] transition-all flex items-center gap-2 shadow-md">
+            투명경영 <span class="material-symbols-outlined text-base">chevron_right</span>
+      </a>
+      <a href="#" class="bg-white border border-[#E0E0E0] text-on-surface hover:bg-black/5 px-8 py-3.5 rounded-full font-bold text-[18px] transition-all flex items-center gap-2 shadow-sm">
+            연차보고 <span class="material-symbols-outlined text-base">chevron_right</span>
+      </a>
+    </div>
+  </div>
+
+  <!-- Bento Grid Layout based on the reference -->
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-6 items-stretch">
+    <!-- Card 1: 기부금 투명성 -->
+    <div class="lg:col-span-5 bg-[#1F2E0D] rounded-[16px] p-8 flex flex-col justify-between text-white border border-white/10 min-h-[340px] shadow-lg">
+      <div>
+        <div class="space-y-4">
+          <!-- Big 88.7% -->
+          <div class="text-[80px] font-black text-[#C5E15C] leading-none tracking-tight">88.7%</div>
+          <div class="pt-2">
+            <p class="text-[24px] font-medium text-white/95 leading-snug">
+              후원금의 88.7%를 곳곳의<br/>사업 수행에 사용합니다.
+            </p>
+          </div>
+        </div>
+      </div>
+      <a class="text-[#C5E15C] font-bold text-lg inline-flex items-center gap-1 mt-6 hover:underline" href="#">재정보고 보기 <span class="material-symbols-outlined text-base">arrow_outward</span></a>
+    </div>
+
+    <!-- Card 2: 글로벌 아동 지원 (Image background, right align text, 42개국 80px) -->
+    <div class="lg:col-span-7 rounded-[16px] p-8 flex flex-col justify-between text-white relative overflow-hidden min-h-[340px] shadow-lg border border-white/10 group">
+      <!-- Background Image with lighter dim overlay to show more image details -->
+      <div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" style="background-image: url('cb0460055704 1.png');"></div>
+      <div class="absolute inset-0 bg-black/20 pointer-events-none"></div>
+      
+      <div class="relative z-10 flex flex-col items-end text-right w-full">
+        <!-- Big 42 and white '개국' 24px -->
+        <div class="font-black text-[#C5E15C] leading-none tracking-tight drop-shadow-[0_2px_4px_rgba(0,0,0,0.5)]">
+          <span class="text-[80px]">42</span><span class="text-[24px] text-white font-medium ml-1">개국</span>
+        </div>
+        <div class="pt-4 w-full">
+          <p class="text-[24px] font-medium text-white leading-snug drop-shadow-[0_2px_4px_rgba(0,0,0,0.5)]">
+            해외 42개국에서 아동과 지역사회의<br/>자립을 지원합니다.
+          </p>
+        </div>
+      </div>
+      <a class="text-white font-bold text-lg inline-flex items-center gap-1 mt-6 hover:underline relative z-10 drop-shadow-[0_2px_4px_rgba(0,0,0,0.5)] self-end" href="#">네트워크 확인 <span class="material-symbols-outlined text-base">arrow_outward</span></a>
+    </div>
+
+    <!-- Card 3: 최고등급 (White card, logo on left, title 60px with Info Icon Tooltip) -->
+    <div class="lg:col-span-6 bg-white rounded-[16px] p-2 flex flex-col md:flex-row items-center gap-6 shadow-md border border-black/5 min-h-[280px]">
+      <div class="w-[280px] h-[180px] flex-shrink-0 flex items-center justify-center bg-transparent rounded-[8px] p-1">
+        <img class="max-h-full max-w-full object-contain" src="image 9593.png" alt="Guide Star 2025 최고등급"/>
+      </div>
+      <div class="flex-1 flex flex-col justify-between h-full py-4 pr-6 pl-2">
+        <div>
+          <div class="flex items-center gap-2 mb-2 relative">
+            <h3 class="text-[60px] font-black text-on-surface leading-none">최고등급</h3>
+            <!-- Tooltip Info Icon Wrapper -->
+            <div class="group/tooltip inline-block relative cursor-help">
+              <span class="material-symbols-outlined text-[32px] text-on-surface-variant/70 hover:text-[#89A230] transition-colors mt-2">info</span>
+              <!-- Tooltip Box -->
+              <div class="absolute bottom-full left-1/2 -translate-x-1/2 mb-3 hidden group-hover/tooltip:block w-72 bg-inverse-surface text-white text-xs rounded-lg p-4 shadow-xl z-50">
+                <p class="font-bold text-sm mb-1 text-[#C5E15C]">한국가이드스타</p>
+                <p class="leading-relaxed text-white/95">공익법인의 투명성과 책무성을 평가하는 국내 대표 공익법인 평가기관입니다.</p>
+                <!-- Tooltip Arrow -->
+                <div class="absolute top-full left-1/2 -translate-x-1/2 -mt-1 border-4 border-transparent border-t-inverse-surface"></div>
+              </div>
+            </div>
+          </div>
+          <!-- 24px Description Text and pt-4 (matched spacing) -->
+          <div class="pt-4">
+            <p class="text-on-surface-variant text-[20px] xl:text-[24px] font-medium leading-snug break-keep">
+              한국가이드스타 공익법인 평가에서<br/>10년 연속 최고등급을 받았습니다.
+            </p>
+          </div>
+        </div>
+        <a class="text-[#89A230] font-bold text-lg inline-flex items-center gap-1 hover:underline mt-auto" href="#">성과 더보기 <span class="material-symbols-outlined text-base">arrow_outward</span></a>
+      </div>
+    </div>
+ 
+    <!-- Card 4: UN 협력 (Olive Green styled Card, ECOSOC Logo transparent natively) -->
+    <div class="lg:col-span-6 bg-[#89A230] text-white rounded-[16px] p-2 flex flex-col md:flex-row items-center gap-6 shadow-md border border-white/10 min-h-[280px]">
+      <div class="w-[280px] h-[280px] flex-shrink-0 flex items-center justify-center bg-transparent p-1">
+        <!-- Render ECOSOC Logo natively, transparent background, using original colored PNG (no invert) -->
+        <img class="max-h-full max-w-full object-contain" src="image 9592.png" alt="UN ECOSOC Logo"/>
+      </div>
+      <div class="flex-1 flex flex-col justify-between h-full py-4 pr-6 pl-2">
+        <div>
+          <div class="flex items-center gap-2 mb-2 relative">
+            <h3 class="text-[60px] font-black text-white leading-none">UN 협력</h3>
+            <!-- Tooltip Info Icon Wrapper for UN 협력 -->
+            <div class="group/tooltip inline-block relative cursor-help">
+              <span class="material-symbols-outlined text-[32px] text-white/70 hover:text-[#C5E15C] transition-colors mt-2">info</span>
+              <!-- Tooltip Box -->
+              <div class="absolute bottom-full left-1/2 -translate-x-1/2 mb-3 hidden group-hover/tooltip:block w-72 bg-inverse-surface text-white text-xs rounded-lg p-4 shadow-xl z-50">
+                <p class="font-bold text-sm mb-1 text-[#C5E15C]">UN ECOSOC 협의지위</p>
+                <p class="leading-relaxed text-white/95">공익법인의 투명성과 책무성을 평가하는 국내 대표 공익법인 평가기관입니다.</p>
+                <!-- Tooltip Arrow -->
+                <div class="absolute top-full left-1/2 -translate-x-1/2 -mt-1 border-4 border-transparent border-t-inverse-surface"></div>
+              </div>
+            </div>
+          </div>
+          <!-- 24px Description Text and pt-4 (matched spacing) -->
+          <div class="pt-4">
+            <p class="text-white/95 text-[20px] xl:text-[24px] font-medium leading-snug break-keep">
+              UN ECOSOC 포괄적 협의지위를 획득한<br/>글로벌 국제구호 NGO입니다.
+            </p>
+          </div>
+        </div>
+        <a class="text-white font-bold text-lg inline-flex items-center gap-1 hover:underline mt-auto" href="#">인증 내역 <span class="material-symbols-outlined text-base">arrow_outward</span></a>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+<!-- 3. Overseas Child 1:1 Sponsorship -->
+<section class="py-[120px] bg-white border-t border-black/5">
+  <div class="max-w-[1440px] mx-auto px-margin-mobile xl:px-0">
+    <!-- Section Header -->
+    <div class="flex justify-between items-end mb-8">
+      <div>
+        <h2 class="text-[40px] font-bold text-on-surface mb-2">당신의 작은 시작이 아이의 내일을 바꿉니다</h2>
+      </div>
+    </div>
+
+    <!-- Carousel Accordion Container -->
+    <div class="flex flex-col gap-8">
+      
+      <div class="relative flex items-center justify-between gap-4">
+        <!-- Left Chevron -->
+        <button id="carousel-prev" class="flex items-center justify-center text-on-surface-variant hover:text-[#89A230] transition-colors focus:outline-none flex-shrink-0 -ml-6">
+          <span class="material-symbols-outlined text-[48px] select-none" style="font-variation-settings: 'wght' 200;">chevron_left</span>
+        </button>
+
+        <!-- Accordion Slider Container -->
+        <div id="children-carousel" class="flex-1 flex gap-6 overflow-x-auto hide-scrollbar py-4 px-1 scroll-smooth items-stretch">
+          
+          <!-- Child Card 1 (살루아) -->
+          <div data-child-id="1" class="accordion-card active flex-shrink-0 bg-[#F4F6F0] rounded-[16px] transition-all duration-500 ease-in-out cursor-pointer overflow-hidden shadow-sm hover:shadow-md select-none">
+            <!-- Active Content -->
+            <div class="active-content h-full p-8 flex flex-col justify-between text-left">
+              <div class="flex justify-between items-start gap-6">
+                <div class="flex-1">
+                  <h3 class="text-[22px] md:text-[24px] font-bold text-on-surface leading-snug break-keep mb-3">
+                    <span class="text-[#8EA837]">9살 소녀 살루아</span>는 성인 남성들 틈에서 홀로 사금을 채취하며 생계를 이어갑니다.
+                  </h3>
+                  <p class="text-[14px] md:text-[15px] text-on-surface-variant leading-relaxed break-keep">
+                    하루 벌이보다 많은 3,000실링(한화 약 900원)을 작업비로 내야 하지만, 말라리아를 앓는 엄마와 장애가 있는 두 살 동생을 돌보기 위해 일을 멈출 수 없습니다.
+                  </p>
+                </div>
+                <div class="w-[150px] h-[150px] rounded-full overflow-hidden flex-shrink-0">
+                  <img src="child3.png" alt="살루아" class="w-full h-full object-cover"/>
+                </div>
+              </div>
+              <div class="flex gap-3 mt-4">
+                <a href="#" class="px-5 py-3 bg-white border border-[#E0E0E0] text-on-surface rounded-[8px] font-bold text-[14px] hover:bg-black/5 transition-all text-center">자세히 보기</a>
+                <a href="#" class="flex-1 py-3 bg-[#8EA837] hover:bg-[#7D942E] text-white rounded-[8px] font-bold text-[14px] transition-all flex items-center justify-center gap-1 shadow-sm"><span class="text-xs leading-none">♡</span> 함께하기</a>
+              </div>
+            </div>
+            <!-- Inactive Content -->
+            <div class="inactive-content h-full p-6 flex flex-col justify-between text-left relative">
+              <div class="w-full">
+                <h3 class="text-[20px] font-bold text-on-surface break-keep leading-snug">살루아</h3>
+              </div>
+              <div class="w-[110px] h-[110px] rounded-full overflow-hidden self-end mt-auto flex-shrink-0">
+                <img src="child3.png" alt="살루아" class="w-full h-full object-cover"/>
+              </div>
+            </div>
+          </div>
+
+          <!-- Child Card 2 (프랙슨 팔리밍가) -->
+          <div data-child-id="2" class="accordion-card flex-shrink-0 bg-[#F4F6F0] rounded-[16px] transition-all duration-500 ease-in-out cursor-pointer overflow-hidden shadow-sm hover:shadow-md select-none">
+            <!-- Active Content -->
+            <div class="active-content h-full p-8 flex flex-col justify-between text-left">
+              <div class="flex justify-between items-start gap-6">
+                <div class="flex-1">
+                  <h3 class="text-[22px] md:text-[24px] font-bold text-on-surface leading-snug break-keep mb-3">
+                    <span class="text-[#8EA837]">11살 소년 프랙슨</span>은 매일 왕복 4시간의 먼 길을 걸어 흙탕물을 길어옵니다.
+                  </h3>
+                  <p class="text-[14px] md:text-[15px] text-on-surface-variant leading-relaxed break-keep">
+                    오염된 물로 배앓이를 자주 앓지만 다른 선택이 없습니다. 하루빨리 깨끗한 물을 마시며 좋아하는 미술 공부에 전념할 수 있기를 꿈꿉니다.
+                  </p>
+                </div>
+                <div class="w-[150px] h-[150px] rounded-full overflow-hidden flex-shrink-0">
+                  <img src="child2.png" alt="프랙슨 팔리밍가" class="w-full h-full object-cover"/>
+                </div>
+              </div>
+              <div class="flex gap-3 mt-4">
+                <a href="#" class="px-5 py-3 bg-white border border-[#E0E0E0] text-on-surface rounded-[8px] font-bold text-[14px] hover:bg-black/5 transition-all text-center">자세히 보기</a>
+                <a href="#" class="flex-1 py-3 bg-[#8EA837] hover:bg-[#7D942E] text-white rounded-[8px] font-bold text-[14px] transition-all flex items-center justify-center gap-1 shadow-sm"><span class="text-xs leading-none">♡</span> 함께하기</a>
+              </div>
+            </div>
+            <!-- Inactive Content -->
+            <div class="inactive-content h-full p-6 flex flex-col justify-between text-left relative">
+              <div class="w-full">
+                <h3 class="text-[20px] font-bold text-on-surface break-keep leading-snug">프랙슨 팔리밍가</h3>
+              </div>
+              <div class="w-[110px] h-[110px] rounded-full overflow-hidden self-end mt-auto flex-shrink-0">
+                <img src="child2.png" alt="프랙슨 팔리밍가" class="w-full h-full object-cover"/>
+              </div>
+            </div>
+          </div>
+
+          <!-- Child Card 3 (에욥 베켈레) -->
+          <div data-child-id="3" class="accordion-card flex-shrink-0 bg-[#F4F6F0] rounded-[16px] transition-all duration-500 ease-in-out cursor-pointer overflow-hidden shadow-sm hover:shadow-md select-none">
+            <!-- Active Content -->
+            <div class="active-content h-full p-8 flex flex-col justify-between text-left">
+              <div class="flex justify-between items-start gap-6">
+                <div class="flex-1">
+                  <h3 class="text-[22px] md:text-[24px] font-bold text-on-surface leading-snug break-keep mb-3">
+                    <span class="text-[#8EA837]">10살 소년 에욥</span>은 거친 먼지가 가득한 공사장에서 돌을 고르며 일합니다.
+                  </h3>
+                  <p class="text-[14px] md:text-[15px] text-on-surface-variant leading-relaxed break-keep">
+                    학교에 가는 대신 하루 종일 허리를 숙여 일하지만, 일이 끝난 뒤 친구들과 흙바닥에서 공을 찰 때가 가장 행복합니다.
+                  </p>
+                </div>
+                <div class="w-[150px] h-[150px] rounded-full overflow-hidden flex-shrink-0">
+                  <img src="child1.png" alt="에욥 베켈레" class="w-full h-full object-cover"/>
+                </div>
+              </div>
+              <div class="flex gap-3 mt-4">
+                <a href="#" class="px-5 py-3 bg-white border border-[#E0E0E0] text-on-surface rounded-[8px] font-bold text-[14px] hover:bg-black/5 transition-all text-center">자세히 보기</a>
+                <a href="#" class="flex-1 py-3 bg-[#8EA837] hover:bg-[#7D942E] text-white rounded-[8px] font-bold text-[14px] transition-all flex items-center justify-center gap-1 shadow-sm"><span class="text-xs leading-none">♡</span> 함께하기</a>
+              </div>
+            </div>
+            <!-- Inactive Content -->
+            <div class="inactive-content h-full p-6 flex flex-col justify-between text-left relative">
+              <div class="w-full">
+                <h3 class="text-[20px] font-bold text-on-surface break-keep leading-snug">에욥 베켈레</h3>
+              </div>
+              <div class="w-[110px] h-[110px] rounded-full overflow-hidden self-end mt-auto flex-shrink-0">
+                <img src="child1.png" alt="에욥 베켈레" class="w-full h-full object-cover"/>
+              </div>
+            </div>
+          </div>
+
+          <!-- Child Card 4 (뷰티 응위라) -->
+          <div data-child-id="4" class="accordion-card flex-shrink-0 bg-[#F4F6F0] rounded-[16px] transition-all duration-500 ease-in-out cursor-pointer overflow-hidden shadow-sm hover:shadow-md select-none">
+            <!-- Active Content -->
+            <div class="active-content h-full p-8 flex flex-col justify-between text-left">
+              <div class="flex justify-between items-start gap-6">
+                <div class="flex-1">
+                  <h3 class="text-[22px] md:text-[24px] font-bold text-on-surface leading-snug break-keep mb-3">
+                    <span class="text-[#8EA837]">8살 소녀 뷰티</span>는 가난으로 인해 연필 대신 차가운 흙을 만지며 일손을 돕습니다.
+                  </h3>
+                  <p class="text-[14px] md:text-[15px] text-on-surface-variant leading-relaxed break-keep">
+                    생계가 막막해 학교 문턱조차 밟아보지 못했습니다. 뷰티가 따뜻한 교육을 받으며 음악의 꿈을 키워갈 수 있도록 지탱해주세요.
+                  </p>
+                </div>
+                <div class="w-[150px] h-[150px] rounded-full overflow-hidden flex-shrink-0">
+                  <img src="child4.png" alt="뷰티 응위라" class="w-full h-full object-cover"/>
+                </div>
+              </div>
+              <div class="flex gap-3 mt-4">
+                <a href="#" class="px-5 py-3 bg-white border border-[#E0E0E0] text-on-surface rounded-[8px] font-bold text-[14px] hover:bg-black/5 transition-all text-center">자세히 보기</a>
+                <a href="#" class="flex-1 py-3 bg-[#8EA837] hover:bg-[#7D942E] text-white rounded-[8px] font-bold text-[14px] transition-all flex items-center justify-center gap-1 shadow-sm"><span class="text-xs leading-none">♡</span> 함께하기</a>
+              </div>
+            </div>
+            <!-- Inactive Content -->
+            <div class="inactive-content h-full p-6 flex flex-col justify-between text-left relative">
+              <div class="w-full">
+                <h3 class="text-[20px] font-bold text-on-surface break-keep leading-snug">뷰티 응위라</h3>
+              </div>
+              <div class="w-[110px] h-[110px] rounded-full overflow-hidden self-end mt-auto flex-shrink-0">
+                <img src="child4.png" alt="뷰티 응위라" class="w-full h-full object-cover"/>
+              </div>
+            </div>
+          </div>
+
+          <!-- Child Card 5 (하일레 수스 예테나) -->
+          <div data-child-id="5" class="accordion-card flex-shrink-0 bg-[#F4F6F0] rounded-[16px] transition-all duration-500 ease-in-out cursor-pointer overflow-hidden shadow-sm hover:shadow-md select-none">
+            <!-- Active Content -->
+            <div class="active-content h-full p-8 flex flex-col justify-between text-left">
+              <div class="flex justify-between items-start gap-6">
+                <div class="flex-1">
+                  <h3 class="text-[22px] md:text-[24px] font-bold text-on-surface leading-snug break-keep mb-3">
+                    <span class="text-[#8EA837]">12살 소년 하일레</span>는 깨끗한 우물이 없어 마실 물을 구하기 위해 매일 방황합니다.
+                  </h3>
+                  <p class="text-[14px] md:text-[15px] text-on-surface-variant leading-relaxed break-keep">
+                    수학 문제 풀기를 가장 좋아하며, 훌륭한 과학자가 되어 마을에 꼭 깨끗한 우물을 만들고 싶다는 꿈을 키워가고 있습니다.
+                  </p>
+                </div>
+                <div class="w-[150px] h-[150px] rounded-full overflow-hidden flex-shrink-0">
+                  <img src="child5.png" alt="하일레 수스 예테나" class="w-full h-full object-cover"/>
+                </div>
+              </div>
+              <div class="flex gap-3 mt-4">
+                <a href="#" class="px-5 py-3 bg-white border border-[#E0E0E0] text-on-surface rounded-[8px] font-bold text-[14px] hover:bg-black/5 transition-all text-center">자세히 보기</a>
+                <a href="#" class="flex-1 py-3 bg-[#8EA837] hover:bg-[#7D942E] text-white rounded-[8px] font-bold text-[14px] transition-all flex items-center justify-center gap-1 shadow-sm"><span class="text-xs leading-none">♡</span> 함께하기</a>
+              </div>
+            </div>
+            <!-- Inactive Content -->
+            <div class="inactive-content h-full p-6 flex flex-col justify-between text-left relative">
+              <div class="w-full">
+                <h3 class="text-[20px] font-bold text-on-surface break-keep leading-snug">하일레 수스 예테나</h3>
+              </div>
+              <div class="w-[110px] h-[110px] rounded-full overflow-hidden self-end mt-auto flex-shrink-0">
+                <img src="child5.png" alt="하일레 수스 예테나" class="w-full h-full object-cover"/>
+              </div>
+            </div>
+          </div>
+
+          <!-- Child Card 6 (나피야드 모하메드) -->
+          <div data-child-id="6" class="accordion-card flex-shrink-0 bg-[#F4F6F0] rounded-[16px] transition-all duration-500 ease-in-out cursor-pointer overflow-hidden shadow-sm hover:shadow-md select-none">
+            <!-- Active Content -->
+            <div class="active-content h-full p-8 flex flex-col justify-between text-left">
+              <div class="flex justify-between items-start gap-6">
+                <div class="flex-1">
+                  <h3 class="text-[22px] md:text-[24px] font-bold text-on-surface leading-snug break-keep mb-3">
+                    <span class="text-[#8EA837]">9살 소년 나피야드</span>는 생계를 위해 나무를 줍지만 손에는 낡은 동화책을 쥐고 있습니다.
+                  </h3>
+                  <p class="text-[14px] md:text-[15px] text-on-surface-variant leading-relaxed break-keep">
+                    책 속 세상에서 꿈을 키우며 언젠가 지혜로운 사람이 되고 싶어 합니다. 나피야드가 끊임없이 배움을 이어갈 수 있도록 버팀목이 되어주세요.
+                  </p>
+                </div>
+                <div class="w-[150px] h-[150px] rounded-full overflow-hidden flex-shrink-0">
+                  <img src="child6.png" alt="나피야드 모하메드" class="w-full h-full object-cover"/>
+                </div>
+              </div>
+              <div class="flex gap-3 mt-4">
+                <a href="#" class="px-5 py-3 bg-white border border-[#E0E0E0] text-on-surface rounded-[8px] font-bold text-[14px] hover:bg-black/5 transition-all text-center">자세히 보기</a>
+                <a href="#" class="flex-1 py-3 bg-[#8EA837] hover:bg-[#7D942E] text-white rounded-[8px] font-bold text-[14px] transition-all flex items-center justify-center gap-1 shadow-sm"><span class="text-xs leading-none">♡</span> 함께하기</a>
+              </div>
+            </div>
+            <!-- Inactive Content -->
+            <div class="inactive-content h-full p-6 flex flex-col justify-between text-left relative">
+              <div class="w-full">
+                <h3 class="text-[20px] font-bold text-on-surface break-keep leading-snug">나피야드 모하메드</h3>
+              </div>
+              <div class="w-[110px] h-[110px] rounded-full overflow-hidden self-end mt-auto flex-shrink-0">
+                <img src="child6.png" alt="나피야드 모하메드" class="w-full h-full object-cover"/>
+              </div>
+            </div>
+          </div>
+
+          <!-- Child Card 7 (러브니스 조나스) -->
+          <div data-child-id="7" class="accordion-card flex-shrink-0 bg-[#F4F6F0] rounded-[16px] transition-all duration-500 ease-in-out cursor-pointer overflow-hidden shadow-sm hover:shadow-md select-none">
+            <!-- Active Content -->
+            <div class="active-content h-full p-8 flex flex-col justify-between text-left">
+              <div class="flex justify-between items-start gap-6">
+                <div class="flex-1">
+                  <h3 class="text-[22px] md:text-[24px] font-bold text-on-surface leading-snug break-keep mb-3">
+                    <span class="text-[#8EA837]">10살 소녀 러브니스</span>는 거친 바람을 가르며 마음껏 달릴 운동장이 갖고 싶습니다.
+                  </h3>
+                  <p class="text-[14px] md:text-[15px] text-on-surface-variant leading-relaxed break-keep">
+                    육상 선수를 꿈꾸지만, 영양실조에 시달립니다. 러브니스가 건강을 회복하고 다시 달릴 수 있도록 응원해주세요.
+                  </p>
+                </div>
+                <div class="w-[150px] h-[150px] rounded-full overflow-hidden flex-shrink-0">
+                  <img src="child7.png" alt="러브니스 조나스" class="w-full h-full object-cover"/>
+                </div>
+              </div>
+              <div class="flex gap-3 mt-4">
+                <a href="#" class="px-5 py-3 bg-white border border-[#E0E0E0] text-on-surface rounded-[8px] font-bold text-[14px] hover:bg-black/5 transition-all text-center">자세히 보기</a>
+                <a href="#" class="flex-1 py-3 bg-[#8EA837] hover:bg-[#7D942E] text-white rounded-[8px] font-bold text-[14px] transition-all flex items-center justify-center gap-1 shadow-sm"><span class="text-xs leading-none">♡</span> 함께하기</a>
+              </div>
+            </div>
+            <!-- Inactive Content -->
+            <div class="inactive-content h-full p-6 flex flex-col justify-between text-left relative">
+              <div class="w-full">
+                <h3 class="text-[20px] font-bold text-on-surface break-keep leading-snug">러브니스 조나스</h3>
+              </div>
+              <div class="w-[110px] h-[110px] rounded-full overflow-hidden self-end mt-auto flex-shrink-0">
+                <img src="child7.png" alt="러브니스 조나스" class="w-full h-full object-cover"/>
+              </div>
+            </div>
+          </div>
+
+          <!-- Child Card 8 (미히마두 카비루) -->
+          <div data-child-id="8" class="accordion-card flex-shrink-0 bg-[#F4F6F0] rounded-[16px] transition-all duration-500 ease-in-out cursor-pointer overflow-hidden shadow-sm hover:shadow-md select-none">
+            <!-- Active Content -->
+            <div class="active-content h-full p-8 flex flex-col justify-between text-left">
+              <div class="flex justify-between items-start gap-6">
+                <div class="flex-1">
+                  <h3 class="text-[22px] md:text-[24px] font-bold text-on-surface leading-snug break-keep mb-3">
+                    <span class="text-[#8EA837]">11살 소년 미히마두</span>는 쓰레기장에서 찾은 고철과 플라스틱으로 물건을 만듭니다.
+                  </h3>
+                  <p class="text-[14px] md:text-[15px] text-on-surface-variant leading-relaxed break-keep">
+                    손재주가 뛰어나고 공작을 좋아하지만 배움의 기회가 부족합니다. 미히마두가 더 안전한 환경에서 공부하며 장인의 재능을 키울 수 있게 도와주세요.
+                  </p>
+                </div>
+                <div class="w-[150px] h-[150px] rounded-full overflow-hidden flex-shrink-0">
+                  <img src="child8.png" alt="미히마두 카비루" class="w-full h-full object-cover"/>
+                </div>
+              </div>
+              <div class="flex gap-3 mt-4">
+                <a href="#" class="px-5 py-3 bg-white border border-[#E0E0E0] text-on-surface rounded-[8px] font-bold text-[14px] hover:bg-black/5 transition-all text-center">자세히 보기</a>
+                <a href="#" class="flex-1 py-3 bg-[#8EA837] hover:bg-[#7D942E] text-white rounded-[8px] font-bold text-[14px] transition-all flex items-center justify-center gap-1 shadow-sm"><span class="text-xs leading-none">♡</span> 함께하기</a>
+              </div>
+            </div>
+            <!-- Inactive Content -->
+            <div class="inactive-content h-full p-6 flex flex-col justify-between text-left relative">
+              <div class="w-full">
+                <h3 class="text-[20px] font-bold text-on-surface break-keep leading-snug">미히마두 카비루</h3>
+              </div>
+              <div class="w-[110px] h-[110px] rounded-full overflow-hidden self-end mt-auto flex-shrink-0">
+                <img src="child8.png" alt="미히마두 카비루" class="w-full h-full object-cover"/>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Right Chevron -->
+        <button id="carousel-next" class="flex items-center justify-center text-on-surface-variant hover:text-[#89A230] transition-colors focus:outline-none flex-shrink-0 -mr-6">
+          <span class="material-symbols-outlined text-[48px] select-none" style="font-variation-settings: 'wght' 200;">chevron_right</span>
+        </button>
+      </div>
+
+      <!-- Scroll Progress Bar -->
+      <div class="w-full max-w-[400px] mx-auto mt-4 h-[3px] bg-black/5 rounded-full overflow-hidden relative">
+        <div id="carousel-progress" class="absolute top-0 left-0 h-full bg-[#8EA837] transition-all duration-300 w-0"></div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Javascript Logic for sponsorship section -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      const carousel = document.getElementById("children-carousel");
+      const prevBtn = document.getElementById("carousel-prev");
+      const nextBtn = document.getElementById("carousel-next");
+      const accordionCards = document.querySelectorAll(".accordion-card");
+      const progress = document.getElementById("carousel-progress");
+
+      // Card click toggling
+      accordionCards.forEach(card => {
+        card.addEventListener("click", function() {
+          if (this.classList.contains("active")) return;
+
+          // Deactivate current active card
+          const currentActive = document.querySelector(".accordion-card.active");
+          if (currentActive) {
+            currentActive.classList.remove("active");
+          }
+
+          // Activate clicked card
+          this.classList.add("active");
+
+          // Centering scroll effect
+          const cardRect = this.getBoundingClientRect();
+          const carouselRect = carousel.getBoundingClientRect();
+          const offset = cardRect.left - carouselRect.left - (carouselRect.width / 2) + (cardRect.width / 2);
+          carousel.scrollBy({ left: offset, behavior: 'smooth' });
+          
+          updateProgress();
+        });
+      });
+
+      // Progress bar updater
+      function updateProgress() {
+        const maxScroll = carousel.scrollWidth - carousel.clientWidth;
+        if (maxScroll > 0) {
+          const scrollPct = (carousel.scrollLeft / maxScroll) * 100;
+          progress.style.width = scrollPct + "%";
+        }
+      }
+
+      carousel.addEventListener("scroll", updateProgress);
+      window.addEventListener("resize", updateProgress);
+      setTimeout(updateProgress, 100);
+
+      // Carousel Chevrons navigate via card activation
+      prevBtn.addEventListener("click", () => {
+        const activeCard = document.querySelector(".accordion-card.active");
+        if (activeCard) {
+          const prevCard = activeCard.previousElementSibling;
+          if (prevCard && prevCard.classList.contains("accordion-card")) {
+            prevCard.click();
+          }
+        }
+      });
+
+      nextBtn.addEventListener("click", () => {
+        const activeCard = document.querySelector(".accordion-card.active");
+        if (activeCard) {
+          const nextCard = activeCard.nextElementSibling;
+          if (nextCard && nextCard.classList.contains("accordion-card")) {
+            nextCard.click();
+          }
+        }
+      });
+    });
+  </script>
+</section>
+<!-- 4. Good Neighbors Stories -->
+<section class="pt-[120px] pb-[120px] bg-white">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-gutter">
+<h2 class="text-[40px] font-bold text-on-surface mb-12">좋은 변화를 전하는 굿네이버스 소식</h2>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+<div class="lg:col-span-7 relative rounded-[8px] overflow-hidden h-[500px] group shadow-xl">
+<img alt="Main Story" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDQRyVXKXmzgia0GdOCSyuJ8AphiEw8CJVL4Tdhr9rZJ59oF0esH803rjA2rZ_c_O1yLO9pPx2VmOPtyGwzs547oh_9QfPZ9F1-MPd4OHvvBg8nIuYbWNV2oXO21KedmIc4GLxrb8DHoMMAcDwmF2UaVZQYLz6u1phW1YEsqbucXC2F5uBANVHDlN5fg5rHgSBfd933q7epNjT_iZpReXH-18hK219H1650N5-7ygdw1af7Mqw7Erq15e2HOT2-kTpX4DVRHU-zBK4"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+<div class="absolute bottom-10 left-10 right-10 text-white">
+<span class="inline-block bg-primary text-white text-xs font-bold px-3 py-1 rounded-full mb-4">현장 스토리</span>
+<h3 class="text-3xl font-bold mb-4">함께 만든 마을의 변화,<br/>더 넓게 이어질 내일</h3>
+<p class="text-white/80 line-clamp-2">키르기즈공화국 통합적 농촌개발사업 2단계 착수식 현장의 생생한 소식을 전해드립니다.</p>
+</div>
+</div>
+<div class="lg:col-span-5 flex flex-col gap-6">
+<div class="flex gap-6 p-4 rounded-[8px] hover:bg-surface-container-low transition-colors cursor-pointer group">
+<img alt="News 1" class="w-32 h-32 rounded-[8px] object-cover flex-shrink-0" src="https://lh3.googleusercontent.com/aida/AP1WRLuPugWxSRTYXVM4jqFLzii4WckxcdFIV9pBb1Z-TLO1kivHCRdae0l-2Cir13QR4d83dfbhjHiuG8Lriz2k5L89tKbyFQMn5Ts6n2sIRQUO0cXfVBAfePLVp3QTD2fCIaRTsmLN4O5HDqTtg_A8sMVlm-0Z1Cl2EzwqCjXzVSg_0HtNLmfoG3aGxtgmYzpNeJZLUP8O3GMD5sHCCZw55zde3aMCifyejz4rJsIxpjwtK6rtYQI-njyyISo"/>
+<div>
+<span class="text-primary text-xs font-bold mb-2 block">국내소식</span>
+<h4 class="font-bold text-lg mb-2 group-hover:text-primary transition-colors">세이프온 장학금이 만들어 낸 변화</h4>
+<p class="text-on-surface-variant text-sm line-clamp-2">장학금을 통해 아이들이 꿈을 향해 나아갈 수 있도록 응원했습니다.</p>
+<span class="text-xs text-outline mt-3 block">2024.06.05</span>
+</div>
+</div>
+<div class="flex gap-6 p-4 rounded-[8px] hover:bg-surface-container-low transition-colors cursor-pointer group">
+<img alt="News 2" class="w-32 h-32 rounded-[8px] object-cover flex-shrink-0" src="https://lh3.googleusercontent.com/aida/AP1WRLv-piSMDW_CIxFF4YMtMDVHSv4YIjIlrrtdZ5tIg12Oo6h27yF9fRqY1kcp0uMfhQ8ppqisIcjAoV8bSAxDAjCqJtoi1M00SYGQ6XQyRJBDoyp_Ixv3A0X03D3ukUj-WgsXpxs0se6e1wwdObTjzlHODnMtkl8Sedd9L-Zu2eC4ErhIYuSsF7bnCxjAHzbDzc-K2Qv8g3uHaZUMd_QU6LxtEMY4J1_OCuwsb0crPO4wyB2yNZnul9PiuQ"/>
+<div>
+<span class="text-primary text-xs font-bold mb-2 block">캠페인</span>
+<h4 class="font-bold text-lg mb-2 group-hover:text-primary transition-colors">꿈꾸는 아이들, 멘토링 프로젝트</h4>
+<p class="text-on-surface-variant text-sm line-clamp-2">지역사회 전문가들과 함께 아동의 진로를 고민하고 지지합니다.</p>
+<span class="text-xs text-outline mt-3 block">2024.05.28</span>
+</div>
+</div>
+<div class="flex gap-6 p-4 rounded-[8px] hover:bg-surface-container-low transition-colors cursor-pointer group">
+<div class="w-32 h-32 bg-surface-container rounded-[8px] flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-primary text-4xl">newspaper</span>
+</div>
+<div>
+<span class="text-primary text-xs font-bold mb-2 block">공지사항</span>
+<h4 class="font-bold text-lg mb-2 group-hover:text-primary transition-colors">2024년 상반기 사업 결과 보고</h4>
+<p class="text-on-surface-variant text-sm line-clamp-2">투명한 운영을 위해 상반기 동안의 성과를 공유합니다.</p>
+<span class="text-xs text-outline mt-3 block">2024.05.15</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 5. Mini Trust Banner -->
+<section class="relative h-[400px] text-white overflow-hidden bg-black">
+  <!-- Background image -->
+  <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('pc1.png');"></div>
+  
+  <!-- Content container -->
+  <div class="relative z-10 flex flex-col justify-center items-center h-full max-w-container-max mx-auto px-margin-mobile text-center">
+    <h2 class="text-3xl md:text-5xl font-bold text-white mb-6 leading-tight">
+      후원금은 어디에 사용되나요?
+    </h2>
+    <p class="text-[24px] text-white leading-relaxed max-w-3xl font-normal">
+      <strong class="font-bold">따뜻한 밥 한 끼</strong>와 <strong class="font-bold">교육의 기회, 아동의 건강</strong>과 <strong class="font-bold">안전을 지키는 보호 활동</strong><br class="hidden md:inline"/>
+      <strong class="font-bold">지역사회가 스스로 자립할 수 있도록 돕는 사업</strong>에 사용됩니다.
+    </p>
+  </div>
+</section>
+<!-- 6. Activity Cards with Chips -->
+<section class="pt-[120px] pb-[120px] bg-white">
+  <div class="max-w-[1440px] mx-auto px-margin-mobile xl:px-0">
+    <h2 class="text-[40px] font-bold text-on-surface mb-12 flex flex-wrap items-center gap-x-2 gap-y-1">
+      <span>지금 참여할 수 있는</span>
+      <span class="relative inline-block" id="campaign-filter-wrapper">
+        <button id="campaign-filter-toggle" class="relative inline-flex items-center text-[#89A230] hover:opacity-80 transition-all select-none gap-2 font-bold focus:outline-none focus:ring-0 border-b-2 border-[#89A230] pb-1">
+          <span id="selected-filter-text">모든</span>
+          <span id="filter-chevron" class="material-symbols-outlined text-[32px] md:text-[40px] transition-transform duration-300 pointer-events-none" style="font-variation-settings: 'wght' 300;">expand_more</span>
+        </button>
+        <!-- Dropdown menu -->
+        <div id="filter-dropdown" class="absolute left-1/2 -translate-x-1/2 mt-3 w-48 bg-white border border-[#89A230] rounded-[8px] shadow-xl hidden z-50 flex flex-col py-2 transition-all duration-300">
+          <button data-filter="all" class="dropdown-item px-6 py-3 text-left text-lg font-bold text-on-surface hover:bg-[#89A230]/10 hover:text-[#89A230] transition-colors focus:outline-none">모든</button>
+          <button data-filter="domestic" class="dropdown-item px-6 py-3 text-left text-lg font-bold text-on-surface hover:bg-[#89A230]/10 hover:text-[#89A230] transition-colors focus:outline-none">국내</button>
+          <button data-filter="overseas" class="dropdown-item px-6 py-3 text-left text-lg font-bold text-on-surface hover:bg-[#89A230]/10 hover:text-[#89A230] transition-colors focus:outline-none">해외</button>
+        </div>
+      </span>
+      <span>활동을 만나보세요</span>
+    </h2>
+    
+    <div class="flex flex-col lg:flex-row gap-12 items-stretch">
+      
+      <!-- Left Column: Large Selected Campaign Photo (No Rounded Corners) -->
+      <div class="w-full lg:w-[450px] flex-shrink-0 overflow-hidden soft-shadow bg-white flex items-center justify-center relative aspect-[3/4]">
+        <img id="campaign-large-photo" class="w-full h-full object-cover transition-opacity duration-300" src="campaign1.png" alt="Active Campaign"/>
+      </div>
+      
+      <!-- Right Column: Carousel of Smaller Campaigns -->
+      <div class="flex-1 flex flex-col justify-end gap-6 overflow-hidden">
+        <!-- Navigation Controls (Larger Chevron Icons) -->
+        <div class="flex items-center justify-start gap-4">
+          <button id="campaign-prev" class="flex items-center justify-center text-on-surface-variant hover:text-[#89A230] transition-colors focus:outline-none">
+            <span class="material-symbols-outlined text-[64px] select-none" style="font-variation-settings: 'wght' 200;">chevron_left</span>
+          </button>
+          <button id="campaign-next" class="flex items-center justify-center text-on-surface-variant hover:text-[#89A230] transition-colors focus:outline-none">
+            <span class="material-symbols-outlined text-[64px] select-none" style="font-variation-settings: 'wght' 200;">chevron_right</span>
+          </button>
+        </div>
+        
+        <!-- Small Cards Carousel Container -->
+        <div id="campaign-carousel" class="flex gap-6 overflow-x-auto hide-scrollbar snap-x py-2 px-1 scroll-smooth w-full">
+          
+          <!-- Campaign Card 1 -->
+          <div data-campaign-id="1" data-category="domestic" class="campaign-card flex-shrink-0 w-[220px] cursor-pointer snap-start transition-all duration-300">
+            <div class="campaign-img-wrapper relative w-full aspect-[3/4] overflow-hidden transition-all">
+              <img class="w-full h-full object-cover" src="campaign1.png" alt="Campaign 1"/>
+            </div>
+          </div>
+
+          <!-- Campaign Card 2 -->
+          <div data-campaign-id="2" data-category="overseas" class="campaign-card flex-shrink-0 w-[220px] cursor-pointer snap-start transition-all duration-300">
+            <div class="campaign-img-wrapper relative w-full aspect-[3/4] overflow-hidden transition-all">
+              <img class="w-full h-full object-cover" src="campaign2.png" alt="Campaign 2"/>
+            </div>
+          </div>
+
+          <!-- Campaign Card 3 -->
+          <div data-campaign-id="3" data-category="overseas" class="campaign-card flex-shrink-0 w-[220px] cursor-pointer snap-start transition-all duration-300">
+            <div class="campaign-img-wrapper relative w-full aspect-[3/4] overflow-hidden transition-all">
+              <img class="w-full h-full object-cover" src="campaign3.jpg" alt="Campaign 3"/>
+            </div>
+          </div>
+
+          <!-- Campaign Card 4 -->
+          <div data-campaign-id="4" data-category="domestic" class="campaign-card flex-shrink-0 w-[220px] cursor-pointer snap-start transition-all duration-300">
+            <div class="campaign-img-wrapper relative w-full aspect-[3/4] overflow-hidden transition-all">
+              <img class="w-full h-full object-cover" src="campaign4.png" alt="Campaign 4"/>
+            </div>
+          </div>
+
+          <!-- Campaign Card 5 -->
+          <div data-campaign-id="5" data-category="overseas" class="campaign-card flex-shrink-0 w-[220px] cursor-pointer snap-start transition-all duration-300">
+            <div class="campaign-img-wrapper relative w-full aspect-[3/4] overflow-hidden transition-all">
+              <img class="w-full h-full object-cover" src="campaign5.jpg" alt="Campaign 5"/>
+            </div>
+          </div>
+
+        </div>
+      </div>
+      
+    </div>
+  </div>
+
+  <!-- Javascript Logic for Campaign Section -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      const campaignCarousel = document.getElementById("campaign-carousel");
+      const campaignPrev = document.getElementById("campaign-prev");
+      const campaignNext = document.getElementById("campaign-next");
+      const campaignCards = document.querySelectorAll(".campaign-card");
+      const campaignLargePhoto = document.getElementById("campaign-large-photo");
+
+      const campaignFilterToggle = document.getElementById("campaign-filter-toggle");
+      const filterDropdown = document.getElementById("filter-dropdown");
+      const filterChevron = document.getElementById("filter-chevron");
+      const selectedFilterText = document.getElementById("selected-filter-text");
+      const dropdownItems = document.querySelectorAll(".dropdown-item");
+
+      const campaignData = {
+        "1": "campaign1.png",
+        "2": "campaign2.png",
+        "3": "campaign3.jpg",
+        "4": "campaign4.png",
+        "5": "campaign5.jpg"
+      };
+
+      let currentActiveId = "1";
+      let currentFilter = "all";
+
+      // Function to update campaign display and hide active item from carousel list
+      function updateCampaigns() {
+        const photoUrl = campaignData[currentActiveId];
+        if (photoUrl) {
+          campaignLargePhoto.style.opacity = 0.3;
+          setTimeout(() => {
+            campaignLargePhoto.src = photoUrl;
+            campaignLargePhoto.style.opacity = 1;
+          }, 150);
+        }
+
+        // Hide currently active campaign to avoid duplication, and apply category filter to others
+        campaignCards.forEach(card => {
+          const cid = card.getAttribute("data-campaign-id");
+          const category = card.getAttribute("data-category");
+
+          if (cid === currentActiveId) {
+            card.classList.add("hidden");
+          } else {
+            if (currentFilter === "all" || category === currentFilter) {
+              card.classList.remove("hidden");
+            } else {
+              card.classList.add("hidden");
+            }
+          }
+        });
+      }
+
+      // Card click
+      campaignCards.forEach(card => {
+        card.addEventListener("click", function() {
+          const campaignId = this.getAttribute("data-campaign-id");
+          currentActiveId = campaignId;
+          updateCampaigns();
+        });
+      });
+
+      // Filter Toggle Dropdown
+      campaignFilterToggle.addEventListener("click", function(e) {
+        e.stopPropagation();
+        const isHidden = filterDropdown.classList.contains("hidden");
+        if (isHidden) {
+          filterDropdown.classList.remove("hidden");
+          filterChevron.classList.add("rotate-180");
+        } else {
+          filterDropdown.classList.add("hidden");
+          filterChevron.classList.remove("rotate-180");
+        }
+      });
+
+      // Dropdown Item Selection
+      dropdownItems.forEach(item => {
+        item.addEventListener("click", function(e) {
+          e.stopPropagation();
+          const filterValue = this.getAttribute("data-filter");
+          const filterText = this.textContent;
+
+          selectedFilterText.textContent = filterText;
+          filterDropdown.classList.add("hidden");
+          filterChevron.classList.remove("rotate-180");
+
+          currentFilter = filterValue;
+
+          // If the currently active campaign doesn't belong to the new filter,
+          // automatically select the first matching campaign of the new filter.
+          const activeCard = Array.from(campaignCards).find(c => c.getAttribute("data-campaign-id") === currentActiveId);
+          const activeCategory = activeCard ? activeCard.getAttribute("data-category") : "";
+          if (currentFilter !== "all" && activeCategory !== currentFilter) {
+            const firstMatch = Array.from(campaignCards).find(c => c.getAttribute("data-category") === currentFilter);
+            if (firstMatch) {
+              currentActiveId = firstMatch.getAttribute("data-campaign-id");
+            }
+          }
+
+          updateCampaigns();
+        });
+      });
+
+      // Close dropdown when clicking outside
+      document.addEventListener("click", function(e) {
+        if (!e.target.closest("#campaign-filter-wrapper")) {
+          filterDropdown.classList.add("hidden");
+          filterChevron.classList.remove("rotate-180");
+        }
+      });
+
+      // Arrow navigation (scrolls by exactly one card width + gap = 220 + 24 = 244px)
+      campaignPrev.addEventListener("click", () => {
+        campaignCarousel.scrollBy({ left: -244, behavior: "smooth" });
+      });
+
+      campaignNext.addEventListener("click", () => {
+        campaignCarousel.scrollBy({ left: 244, behavior: "smooth" });
+      });
+
+      campaignLargePhoto.style.transition = "opacity 0.2s ease-in-out";
+
+      // Initial execution to hide Card 1 from carousel
+      updateCampaigns();
+    });
+  </script>
+</section>
+<!-- 7. Sponsorship Reviews -->
+<section id="reviews-section" class="py-[80px] overflow-hidden relative" style="background-color: #E9EDD8;">
+  <!-- Background Image with controlled opacity -->
+  <div class="absolute inset-0 bg-cover bg-center opacity-60" style="background-image: url('twi001t875636 1.png');"></div>
+  <!-- Overlay to enhance text contrast -->
+  <div class="absolute inset-0 bg-[#E9EDD8]/25 pointer-events-none"></div>
+  <div class="max-w-container-max mx-auto px-margin-mobile md:px-gutter relative z-10">
+    <!-- Header with chevrons on the right of the title -->
+    <div class="flex justify-between items-center mb-10">
+      <h2 class="text-[40px] font-bold text-on-surface">함께한 후, 어떤 변화가 생겼을까요?</h2>
+      <div class="flex items-center gap-4">
+        <button id="reviews-prev" class="flex items-center justify-center text-on-surface-variant hover:text-[#89A230] transition-colors focus:outline-none">
+          <span class="material-symbols-outlined text-[64px] select-none" style="font-variation-settings: 'wght' 200;">chevron_left</span>
+        </button>
+        <button id="reviews-next" class="flex items-center justify-center text-on-surface-variant hover:text-[#89A230] transition-colors focus:outline-none">
+          <span class="material-symbols-outlined text-[64px] select-none" style="font-variation-settings: 'wght' 200;">chevron_right</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Staggered horizontal list (Contained inside 1440px parent, but bleeds to screen edge on the right) -->
+  <div class="w-full pl-margin-mobile md:pl-gutter xl:pl-[calc((100vw-1440px)/2+24px)] pr-0 relative z-10">
+    <div id="reviews-carousel" class="flex items-start gap-8 overflow-x-auto hide-scrollbar snap-x py-8 scroll-smooth w-full pr-margin-mobile md:pr-gutter xl:pr-[calc((100vw-1440px)/2+24px)]">
+      
+      <!-- Review Card 1 (Staggered Down - Buttons visible by default) -->
+      <div class="review-card-interactive initial-active flex-shrink-0 bg-white p-8 rounded-[8px] flex flex-col justify-start translate-y-6 snap-start">
+        <div class="mb-4">
+          <span class="material-symbols-outlined text-[#8AA330] text-5xl block mb-2">format_quote</span>
+          <p class="text-[17px] text-on-surface mb-6 font-medium leading-relaxed">
+            "맛있는 음식을 제공해 주셔서 감사해요. 저도 굿네이버스처럼 누군가를 행복하게 해주는 사람이 되고 싶어졌어요."
+          </p>
+          <div class="flex justify-between items-center border-t border-black/5 pt-2.5 text-sm text-on-surface-variant font-semibold">
+            <span>송지연(가명)</span>
+            <span>2026.04.16</span>
+          </div>
+        </div>
+        <!-- Hover reveal buttons -->
+        <div class="review-buttons flex gap-3">
+          <a href="#" class="flex-1 text-center py-2.5 border border-[#5D504B] text-[#5D504B] font-bold text-sm rounded-[8px] hover:bg-[#5D504B]/10 transition-all">결과보고 보기</a>
+          <a href="#" class="flex-1 text-center py-2.5 bg-[#5D504B] text-white font-bold text-sm rounded-[8px] hover:opacity-90 transition-all">같은 사업 후원하기</a>
+        </div>
+      </div>
+
+      <!-- Review Card 2 (Staggered Up) -->
+      <div class="review-card-interactive flex-shrink-0 bg-white p-8 rounded-[8px] flex flex-col justify-start -translate-y-6 snap-start">
+        <div class="mb-4">
+          <span class="material-symbols-outlined text-[#8AA330] text-5xl block mb-2">format_quote</span>
+          <p class="text-[17px] text-on-surface mb-6 font-medium leading-relaxed">
+            "작은 나눔이 한 아이의 하루를 바꿀 수 있다는 걸 알게 됐어요."
+          </p>
+          <div class="flex justify-between items-center border-t border-black/5 pt-2.5 text-sm text-on-surface-variant font-semibold">
+            <span>정기후원자</span>
+            <span>2026.04.11</span>
+          </div>
+        </div>
+        <!-- Hover reveal buttons -->
+        <div class="review-buttons flex gap-3">
+          <a href="#" class="flex-1 text-center py-2.5 border border-[#5D504B] text-[#5D504B] font-bold text-sm rounded-[8px] hover:bg-[#5D504B]/10 transition-all">결과보고 보기</a>
+          <a href="#" class="flex-1 text-center py-2.5 bg-[#5D504B] text-white font-bold text-sm rounded-[8px] hover:opacity-90 transition-all">같은 사업 후원하기</a>
+        </div>
+      </div>
+
+      <!-- Review Card 3 (Staggered Down) -->
+      <div class="review-card-interactive flex-shrink-0 bg-white p-8 rounded-[8px] flex flex-col justify-start translate-y-8 snap-start">
+        <div class="mb-4">
+          <span class="material-symbols-outlined text-[#8AA330] text-5xl block mb-2">format_quote</span>
+          <p class="text-[17px] text-on-surface mb-6 font-medium leading-relaxed">
+            "매주 복지관 선생님들과 친구들을 만날 수 있는 기회를 열어주신 덕분에 주말이 행복해졌어요."
+          </p>
+          <div class="flex justify-between items-center border-t border-black/5 pt-2.5 text-sm text-on-surface-variant font-semibold">
+            <span>위기가정 아동</span>
+            <span>2026.04.09</span>
+          </div>
+        </div>
+        <!-- Hover reveal buttons -->
+        <div class="review-buttons flex gap-3">
+          <a href="#" class="flex-1 text-center py-2.5 border border-[#5D504B] text-[#5D504B] font-bold text-sm rounded-[8px] hover:bg-[#5D504B]/10 transition-all">결과보고 보기</a>
+          <a href="#" class="flex-1 text-center py-2.5 bg-[#5D504B] text-white font-bold text-sm rounded-[8px] hover:opacity-90 transition-all">같은 사업 후원하기</a>
+        </div>
+      </div>
+
+      <!-- Review Card 4 (Staggered Up) -->
+      <div class="review-card-interactive flex-shrink-0 bg-white p-8 rounded-[8px] flex flex-col justify-start -translate-y-8 snap-start">
+        <div class="mb-4">
+          <span class="material-symbols-outlined text-[#8AA330] text-5xl block mb-2">format_quote</span>
+          <p class="text-[17px] text-on-surface mb-6 font-medium leading-relaxed">
+            "작은 손길이 모여 세상을 바꿀 수 있음을 다시 한번 배웠습니다."
+          </p>
+          <div class="flex justify-between items-center border-t border-black/5 pt-2.5 text-sm text-on-surface-variant font-semibold">
+            <span>정기기부자</span>
+            <span>2026.04.02</span>
+          </div>
+        </div>
+        <!-- Hover reveal buttons -->
+        <div class="review-buttons flex gap-3">
+          <a href="#" class="flex-1 text-center py-2.5 border border-[#5D504B] text-[#5D504B] font-bold text-sm rounded-[8px] hover:bg-[#5D504B]/10 transition-all">결과보고 보기</a>
+          <a href="#" class="flex-1 text-center py-2.5 bg-[#5D504B] text-white font-bold text-sm rounded-[8px] hover:opacity-90 transition-all">같은 사업 후원하기</a>
+        </div>
+      </div>
+
+      <!-- Review Card 5 (Staggered Down) -->
+      <div class="review-card-interactive flex-shrink-0 bg-white p-8 rounded-[8px] flex flex-col justify-start translate-y-6 snap-start">
+        <div class="mb-4">
+          <span class="material-symbols-outlined text-[#8AA330] text-5xl block mb-2">format_quote</span>
+          <p class="text-[17px] text-on-surface mb-6 font-medium leading-relaxed">
+            "깨끗한 물을 마음껏 마실 수 있게 되어 공부에 더 집중할 수 있게 되었어요!"
+          </p>
+          <div class="flex justify-between items-center border-t border-black/5 pt-2.5 text-sm text-on-surface-variant font-semibold">
+            <span>식수정수 수혜국 아동</span>
+            <span>2026.03.29</span>
+          </div>
+        </div>
+        <!-- Hover reveal buttons -->
+        <div class="review-buttons flex gap-3">
+          <a href="#" class="flex-1 text-center py-2.5 border border-[#5D504B] text-[#5D504B] font-bold text-sm rounded-[8px] hover:bg-[#5D504B]/10 transition-all">결과보고 보기</a>
+          <a href="#" class="flex-1 text-center py-2.5 bg-[#5D504B] text-white font-bold text-sm rounded-[8px] hover:opacity-90 transition-all">같은 사업 후원하기</a>
+        </div>
+      </div>
+
+      <!-- Review Card 6 (Staggered Up) -->
+      <div class="review-card-interactive flex-shrink-0 bg-white p-8 rounded-[8px] flex flex-col justify-start -translate-y-6 snap-start">
+        <div class="mb-4">
+          <span class="material-symbols-outlined text-[#8AA330] text-5xl block mb-2">format_quote</span>
+          <p class="text-[17px] text-on-surface mb-6 font-medium leading-relaxed">
+            "제 작은 후원금이 이렇게 든든한 변화가 되어 아동에게 전달된 것을 보니 뿌듯합니다."
+          </p>
+          <div class="flex justify-between items-center border-t border-black/5 pt-2.5 text-sm text-on-surface-variant font-semibold">
+            <span>최영훈 후원자</span>
+            <span>2026.03.14</span>
+          </div>
+        </div>
+        <!-- Hover reveal buttons -->
+        <div class="review-buttons flex gap-3">
+          <a href="#" class="flex-1 text-center py-2.5 border border-[#5D504B] text-[#5D504B] font-bold text-sm rounded-[8px] hover:bg-[#5D504B]/10 transition-all">결과보고 보기</a>
+          <a href="#" class="flex-1 text-center py-2.5 bg-[#5D504B] text-white font-bold text-sm rounded-[8px] hover:opacity-90 transition-all">같은 사업 후원하기</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Script for Review Section Horizontal Loop Autoplay -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      const reviewsCarousel = document.getElementById("reviews-carousel");
+      const reviewsPrev = document.getElementById("reviews-prev");
+      const reviewsNext = document.getElementById("reviews-next");
+
+      // Reset scroll position to first card on load/refresh
+      reviewsCarousel.scrollLeft = 0;
+
+      const cardWidth = 392; // 360px card width + 32px gap (gap-8)
+      let autoplayInterval;
+
+      // Clone original cards to build a seamless infinite loop
+      const originalCards = Array.from(reviewsCarousel.children);
+      originalCards.forEach(card => {
+        const clone = card.cloneNode(true);
+        // Ensure clone does not duplicate the absolute initial-active styling behavior natively
+        clone.classList.remove('initial-active');
+        reviewsCarousel.appendChild(clone);
+      });
+
+      const totalOriginalWidth = originalCards.length * cardWidth;
+
+      function startAutoplay() {
+        autoplayInterval = setInterval(() => {
+          // If scrolled past the original set, snap back to 0 seamlessly before scrolling next
+          if (reviewsCarousel.scrollLeft >= totalOriginalWidth - 10) {
+            reviewsCarousel.scrollLeft = 0;
+          }
+          reviewsCarousel.scrollBy({ left: cardWidth, behavior: "smooth" });
+        }, 2500); // 2.5s auto scroll speed
+      }
+
+      function stopAutoplay() {
+        clearInterval(autoplayInterval);
+      }
+
+      // Start loop on load
+      startAutoplay();
+
+      // Pause loop on hover/touch interactions
+      reviewsCarousel.addEventListener("mouseenter", stopAutoplay);
+      reviewsCarousel.addEventListener("mouseleave", startAutoplay);
+      reviewsCarousel.addEventListener("touchstart", stopAutoplay);
+      reviewsCarousel.addEventListener("touchend", startAutoplay);
+
+      // Chevron Navigation
+      reviewsPrev.addEventListener("click", () => {
+        stopAutoplay();
+        if (reviewsCarousel.scrollLeft <= 10) {
+          reviewsCarousel.scrollLeft = totalOriginalWidth;
+        }
+        reviewsCarousel.scrollBy({ left: -cardWidth, behavior: "smooth" });
+        startAutoplay();
+      });
+
+      reviewsNext.addEventListener("click", () => {
+        stopAutoplay();
+        if (reviewsCarousel.scrollLeft >= totalOriginalWidth - 10) {
+          reviewsCarousel.scrollLeft = 0;
+        }
+        reviewsCarousel.scrollBy({ left: cardWidth, behavior: "smooth" });
+        startAutoplay();
+      });
+    });
+  </script>
+</section>
+<!-- 8. New News/Notice -->
+<section class="py-[120px] bg-white border-t border-black/5">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-gutter">
+<div class="flex justify-between items-center mb-8">
+  <h2 class="text-[40px] font-bold text-on-surface leading-tight">굿네이버스 새소식을 확인하세요.</h2>
+  <a class="w-12 h-12 rounded-[8px] border border-black/10 hover:border-[#89A230] flex items-center justify-center text-on-surface-variant hover:text-[#89A230] transition-all" href="#">
+    <span class="material-symbols-outlined text-[32px] font-light">add</span>
+  </a>
+</div>
+
+<!-- Category Tabs -->
+<div class="flex gap-3 mb-8">
+  <button class="bg-[#313030] text-white px-6 py-2.5 rounded-full text-base font-bold transition-all shadow-sm">전체</button>
+  <button class="bg-transparent hover:bg-black/5 text-on-surface-variant border border-black/10 px-6 py-2.5 rounded-full text-base font-medium transition-all">보도자료</button>
+  <button class="bg-transparent hover:bg-black/5 text-on-surface-variant border border-black/10 px-6 py-2.5 rounded-full text-base font-medium transition-all">국내</button>
+</div>
+
+<!-- Layout: Left side 2 big news cards with image and background block (Reference 1 layout), Right side vertical list (Reference 2 layout) -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-5 items-stretch">
+  <!-- Left Side: 2 Big News Cards (lg:col-span-8 to balance text lists and image news cards) -->
+  <div class="lg:col-span-8 grid grid-cols-1 md:grid-cols-2 gap-4">
+    <!-- Big News 1 -->
+    <a href="#" class="group block bg-[#EFF3E7] hover:bg-[#E3EAD8] rounded-[16px] flex flex-col justify-between transition-all min-h-[460px] overflow-hidden border border-black/5 hover:shadow-lg">
+      <!-- Content Top Area with Padding -->
+      <div class="p-6 pb-4 flex-1 flex flex-col justify-between">
+        <div>
+          <!-- Header row inside card: tag and arrow -->
+          <div class="flex justify-between items-center mb-3">
+            <span class="bg-black text-white px-3 py-1 rounded-full text-xs font-bold uppercase select-none">보도자료</span>
+            <div class="w-8 h-8 rounded-full bg-black/5 group-hover:bg-black/10 flex items-center justify-center text-on-surface-variant transition-colors">
+              <span class="material-symbols-outlined text-[18px] font-bold">arrow_outward</span>
+            </div>
+          </div>
+          <h3 class="text-[19px] font-extrabold text-on-surface leading-snug mb-1 group-hover:text-primary transition-colors">
+            굿네이버스, 교사 마음건강 토크콘서트 '교실의 마음을 듣다' 개최
+          </h3>
+        </div>
+        <div class="flex items-center gap-1.5 text-xs text-on-surface-variant/80 font-medium mt-3">
+          <span class="material-symbols-outlined text-[14px]">calendar_month</span>
+          <span>2026.06.10</span>
+        </div>
+      </div>
+      <!-- Image Bottom Area - No Padding, fills width and forms bottom rounded corners - height increased to 290px for full exposure -->
+      <div class="w-full overflow-hidden h-[290px] mt-auto">
+        <img src="A6ElwLlq3.jpg" alt="교실의 마음을 듣다" class="w-full h-full object-cover"/>
+      </div>
+    </a>
+
+    <!-- Big News 2 -->
+    <a href="#" class="group block bg-[#EFF3E7] hover:bg-[#E3EAD8] rounded-[16px] flex flex-col justify-between transition-all min-h-[460px] overflow-hidden border border-black/5 hover:shadow-lg">
+      <!-- Content Top Area with Padding -->
+      <div class="p-6 pb-4 flex-1 flex flex-col justify-between">
+        <div>
+          <div class="flex justify-between items-center mb-3">
+            <span class="bg-black text-white px-3 py-1 rounded-full text-xs font-bold uppercase select-none">국내</span>
+            <div class="w-8 h-8 rounded-full bg-black/5 group-hover:bg-black/10 flex items-center justify-center text-on-surface-variant transition-colors">
+              <span class="material-symbols-outlined text-[18px] font-bold">arrow_outward</span>
+            </div>
+          </div>
+          <h3 class="text-[19px] font-extrabold text-on-surface leading-snug mb-1 group-hover:text-primary transition-colors">
+            우리 단체, (주)코빗과 '가상자산 기부 캠페인' 진행
+          </h3>
+        </div>
+        <div class="flex items-center gap-1.5 text-xs text-on-surface-variant/80 font-medium mt-3">
+          <span class="material-symbols-outlined text-[14px]">calendar_month</span>
+          <span>2026.06.09</span>
+        </div>
+      </div>
+      <!-- Image Bottom Area - No Padding, fills width and forms bottom rounded corners - height increased to 290px for full exposure -->
+      <div class="w-full overflow-hidden h-[290px] mt-auto">
+        <img src="XQBq0X2No.jpg" alt="가상자산 기부 캠페인" class="w-full h-full object-cover"/>
+      </div>
+    </a>
+  </div>
+
+  <!-- Right Side: 3 Text List Items (lg:col-span-4 to make them narrower and longer) -->
+  <div class="lg:col-span-4 flex flex-col justify-between gap-4">
+    <!-- Right Item 1 -->
+    <a href="#" class="group block bg-white hover:bg-neutral-50 rounded-[12px] p-6 transition-all border border-black/5 hover:shadow-md flex-1 flex flex-col justify-between">
+      <div>
+        <span class="bg-[#EFF3E7] text-[#89A230] px-3 py-1 rounded-[4px] text-xs font-bold inline-block mb-3">국내</span>
+        <h4 class="text-[15px] font-bold text-on-surface leading-relaxed group-hover:text-primary transition-colors">
+          우리 단체, 현대자동차그룹과 함께 '아이들을 지키는 당신을 위한 시간, 아이케어 업(i CARE UP)' 진행
+        </h4>
+      </div>
+      <span class="text-xs text-outline mt-4 block">2026.06.08</span>
+    </a>
+
+    <!-- Right Item 2 -->
+    <a href="#" class="group block bg-white hover:bg-neutral-50 rounded-[12px] p-6 transition-all border border-black/5 hover:shadow-md flex-1 flex flex-col justify-between">
+      <div>
+        <span class="bg-[#EFF3E7] text-[#89A230] px-3 py-1 rounded-[4px] text-xs font-bold inline-block mb-3">보도자료</span>
+        <h4 class="text-[15px] font-bold text-on-surface leading-relaxed group-hover:text-primary transition-colors">
+          굿네이버스, 키르기즈공화국 통합적 농촌개발사업 2단계 착수식 진행
+        </h4>
+      </div>
+      <span class="text-xs text-outline mt-4 block">2026.06.03</span>
+    </a>
+
+    <!-- Right Item 3 -->
+    <a href="#" class="group block bg-white hover:bg-neutral-50 rounded-[12px] p-6 transition-all border border-black/5 hover:shadow-md flex-1 flex flex-col justify-between">
+      <div>
+        <span class="bg-[#EFF3E7] text-[#89A230] px-3 py-1 rounded-[4px] text-xs font-bold inline-block mb-3">국내</span>
+        <h4 class="text-[15px] font-bold text-on-surface leading-relaxed group-hover:text-primary transition-colors">
+          우리 단체, 삼성전자 수원사업장과 가정의 달 기념 후원금 전달식 진행
+        </h4>
+      </div>
+      <span class="text-xs text-outline mt-4 block">2026.05.28</span>
+    </a>
+  </div>
+</div>
+</div>
+</section>
+<!-- 9. Sponsorship Methods Bento Grid -->
+<section class="py-[120px] bg-white">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-gutter">
+  <!-- Header row (Left-aligned text with header on left, subtext underneath matching reference 1) -->
+  <div class="mb-16">
+    <div class="text-[#8EA837] text-[15px] font-bold uppercase tracking-wider mb-2">GOOD INFLUENCE</div>
+    <h2 class="text-[38px] font-extrabold text-on-surface leading-tight">나에게 맞는 방식으로 나눔을 시작해보세요</h2>
+  </div>
+
+  <!-- Layout: Left side big card (Highlight), Right side 4 grid items matching layout in reference 1 but content from reference 2 -->
+  <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-stretch">
+    <!-- Left Big Card (Highlight - Hope letter writing contest matching reference 2) -->
+    <div class="lg:col-span-6 bg-[#EFF3E7] rounded-[16px] p-6 flex flex-col justify-between hover:shadow-xl transition-all border border-black/5 min-h-[384px]">
+      
+      <!-- Image frame - spans to top of card content now that header is deleted -->
+      <div class="w-full overflow-hidden rounded-[12px] mb-2">
+        <img src="Og0EG6mpL 1.png" alt="제18회 희망편지쓰기대회 찰스의 보물 이야기" class="w-full h-[270px] object-cover object-[center_35%]"/>
+      </div>
+      
+      <div class="flex items-end justify-between pt-1">
+        <h3 class="text-[20px] font-extrabold text-on-surface leading-snug">
+          제18회 희망편지쓰기대회<br/>
+          찰스의 보물 이야기
+        </h3>
+        <a href="#" class="w-10 h-10 bg-[#8EA837] rounded-full flex items-center justify-center text-white hover:opacity-90 transition-all shadow-sm shrink-0">
+          <span class="material-symbols-outlined font-bold text-[20px]">arrow_outward</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- Right Grid Cards (4 grid cards: 2x2 layout, content from reference 2) -->
+    <div class="lg:col-span-6 grid grid-cols-1 sm:grid-cols-2 gap-6 items-stretch">
+      
+      <!-- Right Card 1: Good Neighbors Shop -->
+      <a href="#" class="group bg-[#EFF3E7] hover:bg-[#E3EAD8] rounded-[12px] p-5 flex flex-col justify-between transition-all border-none hover:shadow-lg min-h-[180px]">
+        <div>
+          <h4 class="text-[19px] font-bold text-on-surface mb-1 group-hover:text-primary transition-colors">좋은이웃가게</h4>
+          <p class="text-on-surface-variant text-[14px] leading-snug">소상공인부터 프랜차이즈까지, 함께 따뜻한 나눔을 만들어갑니다.</p>
+        </div>
+        <div class="w-full flex justify-end mt-2">
+          <div class="w-[52px] h-[52px] flex items-center justify-center transition-transform group-hover:scale-105">
+            <img src="streamline-color_store-1-flat.svg" alt="좋은이웃가게" class="w-[52px] h-[52px] object-contain"/>
+          </div>
+        </div>
+      </a>
+
+      <!-- Right Card 2: Corporate Sponsor -->
+      <a href="#" class="group bg-[#EFF3E7] hover:bg-[#E3EAD8] rounded-[12px] p-5 flex flex-col justify-between transition-all border-none hover:shadow-lg min-h-[180px]">
+        <div>
+          <h4 class="text-[19px] font-bold text-on-surface mb-1 group-hover:text-primary transition-colors">기업 후원</h4>
+          <p class="text-on-surface-variant text-[14px] leading-snug">기업의 사회공헌으로 더 큰 변화를 함께 만들어가요.</p>
+        </div>
+        <div class="w-full flex justify-end mt-2">
+          <div class="w-[52px] h-[52px] flex items-center justify-center transition-transform group-hover:scale-105">
+            <img src="streamline-color_office-building-1-flat.svg" alt="기업 후원" class="w-[52px] h-[52px] object-contain"/>
+          </div>
+        </div>
+      </a>
+
+      <!-- Right Card 3: Legacy Donation -->
+      <a href="#" class="group bg-[#EFF3E7] hover:bg-[#E3EAD8] rounded-[12px] p-5 flex flex-col justify-between transition-all border-none hover:shadow-lg min-h-[180px]">
+        <div>
+          <h4 class="text-[19px] font-bold text-on-surface mb-1 group-hover:text-primary transition-colors">유산 기부</h4>
+          <p class="text-on-surface-variant text-[14px] leading-snug">삶의 마지막 나눔으로 다음 세대의 희망을 남겨요.</p>
+        </div>
+        <div class="w-full flex justify-end mt-2">
+          <div class="w-[52px] h-[52px] flex items-center justify-center transition-transform group-hover:scale-105">
+            <img src="streamline-color_coins-stack-flat.svg" alt="유산 기부" class="w-[52px] h-[52px] object-contain"/>
+          </div>
+        </div>
+      </a>
+
+      <!-- Right Card 4: Anniversary Sponsor -->
+      <a href="#" class="group bg-[#EFF3E7] hover:bg-[#E3EAD8] rounded-[12px] p-5 flex flex-col justify-between transition-all border-none hover:shadow-lg min-h-[180px]">
+        <div>
+          <h4 class="text-[19px] font-bold text-on-surface mb-1 group-hover:text-primary transition-colors">기념일 후원</h4>
+          <p class="text-on-surface-variant text-[14px] leading-snug">생일·기념일을 의미 있게, 나눔으로 함께 축하해요.</p>
+        </div>
+        <div class="w-full flex justify-end mt-2">
+          <div class="w-[52px] h-[52px] flex items-center justify-center transition-transform group-hover:scale-105">
+            <img src="streamline-color_gift-2-flat.svg" alt="기념일 후원" class="w-[52px] h-[52px] object-contain"/>
+          </div>
+        </div>
+      </a>
+  </div>
+</div>
+</section>
+<!-- 10. Re-engagement Card (Gradient background, centered layout) -->
+<section class="py-[160px] bg-gradient-to-b from-white via-[#F8FAF2] to-[#E9EDD8] relative overflow-hidden">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-gutter relative z-10 text-center">
+  <h2 class="text-[40px] font-bold text-on-surface mb-6 leading-tight">후원이 처음이세요?</h2>
+  <div class="flex flex-col sm:flex-row justify-center items-center gap-4">
+    <a href="#" class="px-8 py-4 bg-white border border-[#89A230] text-[#89A230] hover:bg-black/5 rounded-full font-bold text-lg transition-all shadow-sm">
+      후원 가이드 보기
+    </a>
+    <a href="#" class="px-8 py-4 bg-[#89A230] hover:bg-[#788a29] text-white rounded-full font-bold text-lg transition-all shadow-md">
+      한 번의 나눔 전하기 · 일시후원
+    </a>
+  </div>
+</div>
+<!-- Decorative organic background lines matching the reference design -->
+<div class="absolute inset-0 opacity-15 pointer-events-none select-none">
+  <svg class="w-full h-full" viewBox="0 0 1440 600" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M-100,300 C300,100 500,500 900,200 C1100,50 1300,450 1600,250" stroke="#89A230" stroke-width="1.5" stroke-linecap="round"/>
+    <path d="M-50,350 C350,150 550,550 950,250 C1150,100 1350,500 1650,300" stroke="#89A230" stroke-width="1" stroke-linecap="round" stroke-dasharray="4 4"/>
+  </svg>
+</div>
+</section>
+<!-- 10.5. Newsletter Section -->
+<section class="relative py-20 bg-cover text-white border-t border-black/5" style="background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('pc004339120 1.png'); background-position: center 15%;">
+  <div class="max-w-container-max mx-auto px-margin-mobile md:px-gutter flex flex-col lg:flex-row justify-between items-center gap-12 relative z-10">
+    <!-- Left: Title & Description -->
+    <div class="w-full lg:w-1/2 text-left">
+      <h2 class="text-[32px] font-bold mb-4 tracking-tight leading-tight">뉴스레터 신청</h2>
+      <p class="text-white text-lg leading-relaxed">
+        <span class="text-[#D3E39C] font-semibold">뉴스레터</span>를 구독하고 최신 소식을 빠르고 쉽게 받아보세요.
+      </p>
+    </div>
+    
+    <!-- Right: Newsletter Form -->
+    <div class="w-full lg:w-1/2 flex flex-col justify-center items-end">
+      <form class="w-full max-w-[620px] flex flex-col gap-3 items-end">
+        <!-- Input fields row -->
+        <div class="w-full flex flex-col sm:flex-row gap-3 items-center">
+          <input class="w-full sm:flex-1 bg-white text-black placeholder-gray-400 rounded-[6px] px-4 py-3.5 outline-none text-base border-none h-[52px]" placeholder="이름" type="text"/>
+          <input class="w-full sm:flex-[1.8] bg-white text-black placeholder-gray-400 rounded-[6px] px-4 py-3.5 outline-none text-base border-none h-[52px]" placeholder="이메일 주소" type="email"/>
+          <button class="w-full sm:w-auto bg-[#8EA837] hover:bg-[#7D942E] text-white font-bold px-8 rounded-[6px] transition-all text-base shrink-0 h-[52px] flex items-center justify-center">
+            신청하기
+          </button>
+        </div>
+        
+        <!-- Privacy Policy Checkbox -->
+        <label class="flex items-center gap-2.5 text-xs text-white cursor-pointer font-medium mt-1 select-none w-full justify-start sm:justify-end">
+          <input class="rounded text-[#8EA837] focus:ring-[#8EA837] border-gray-300 w-4 h-4 bg-white/20 border-white/40 shrink-0" type="checkbox" checked/>
+          <span class="whitespace-nowrap">굿네이버스 소식, 후원 정보를 전달 목적으로 이름, 이메일 정보를 수집하며 수신 거부 시까지 이용, 보유하는 데 동의합니다.</span>
+        </label>
+      </form>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- 11. Footer -->
+<footer class="site-footer">
+	<div class="footer-top">
+		<nav class="footer-links" aria-label="하단 메뉴">
+			<a href="#">이용약관</a>
+			<a href="#">개인정보처리방침</a>
+			<a href="#">인재채용</a>
+			<a href="#">후원문의</a>
+			<a href="#">FAQ</a>
+			<a href="#">사이트맵</a>
+			<a href="#">브랜드가이드라인</a>
+			<a href="#">세이프가딩정책</a>
+		</nav>
+		<div class="footer-sns" aria-label="SNS 채널">
+			<a href="#" class="sns" aria-label="유튜브">
+				<svg viewBox="0 0 24 24" fill="currentColor"><path d="M23 7.5a3 3 0 0 0-2.1-2.1C19 4.9 12 4.9 12 4.9s-7 0-8.9.5A3 3 0 0 0 1 7.5 31 31 0 0 0 .5 12 31 31 0 0 0 1 16.5a3 3 0 0 0 2.1 2.1c1.9.5 8.9.5 8.9.5s7 0 8.9-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 23.5 12 31 31 0 0 0 23 7.5zM9.8 15.3V8.7l5.7 3.3z"></path></svg>
+			</a>
+			<a href="#" class="sns" aria-label="블로그">
+				<svg viewBox="0 0 24 24" fill="currentColor"><rect x="3" y="3" width="18" height="18" rx="6"></rect><text x="12" y="15.5" font-size="8" font-weight="700" text-anchor="middle" fill="#fff" font-family="Arial">blog</text></svg>
+			</a>
+			<a href="#" class="sns" aria-label="인스타그램">
+				<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3.5" y="3.5" width="17" height="17" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17" cy="7" r="1.2" fill="currentColor" stroke="none"></circle></svg>
+			</a>
+			<a href="#" class="sns" aria-label="페이스북">
+				<svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 9V7c0-1 .3-1.5 1.6-1.5H17V2.5h-2.6C11.5 2.5 10.3 4 10.3 6.6V9H8v3h2.3v9.5h3.7V12h2.6l.4-3z"></path></svg>
+			</a>
+			<a href="#" class="sns" aria-label="카카오스토리">
+				<svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 3C6.9 3 2.8 6.2 2.8 10.2c0 2.6 1.8 4.9 4.4 6.2-.2.7-.7 2.5-.8 2.9 0 .2.1.5.4.3.3-.2 2.6-1.8 3.6-2.5.5.1 1 .1 1.6.1 5.1 0 9.2-3.2 9.2-7.2S17.1 3 12 3z"></path></svg>
+			</a>
+			<a href="#" class="sns" aria-label="엑스(트위터)">
+				<svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 3h3l-6.6 7.5L21.7 21h-6l-4.7-6-5.4 6H2.6l7-8L2.5 3h6.1l4.2 5.6zm-1 16h1.7L7.6 4.7H5.8z"></path></svg>
+			</a>
+		</div>
+	</div>
+	<div class="footer-main">
+		<div class="footer-info">
+			<img src="https://cdn.gni.kr/assets/images/qna/logo.png" alt="굿네이버스" class="footer-logo">
+			<div>사단법인 굿네이버스 인터내셔날 105-82-13183 &nbsp;|&nbsp; 대표 : 이일하</div>
+			<div>사회복지법인 굿네이버스 105-82-10319 &nbsp;|&nbsp; 대표 : 이호균</div>
+			<div>주소 : 서울 영등포구 버드나루로 13 굿네이버스회관</div>
+			<div>이메일 : <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="bcd1ddcfc8d9cefcdbd3d3d8d2d9d5dbd4ded3cecf92d7ce">[email&nbsp;protected]</a></div>
+			<div style="margin-top:12px;">Copyright © Good Neighbors. ALL Rights Reserved.</div>
+		</div>
+		<div class="footer-contact">
+			<a href="#" class="app-btn" style="background-color: transparent; border: 1px solid #89A230; color: #191919;">
+				<span class="app-btn-ico" aria-hidden="true" style="color: #191919;">
+					<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect><line x1="12" y1="18" x2="12.01" y2="18"></line></svg>
+				</span>
+				<span>공식 앱 알아보기</span>
+			</a>
+			<a href="#" class="app-btn" style="background-color: transparent; border: 1px solid #89A230; color: #191919;">
+				<span class="app-btn-ico" aria-hidden="true" style="color: #191919;">
+					<svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 3C6.9 3 2.8 6.2 2.8 10.2c0 2.6 1.8 4.9 4.4 6.2-.2.7-.7 2.5-.8 2.9 0 .2.1.5.4.3.3-.2 2.6-1.8 3.6-2.5.5.1 1 .1 1.6.1 5.1 0 9.2-3.2 9.2-7.2S17.1 3 12 3z"></path></svg>
+				</span>
+				<span>카카오톡 채널추가</span>
+			</a>
+			<b class="footer-contact-title">후원문의·상담</b>
+			<div class="footer-tel-row" style="margin-top: 4px;">
+				<div class="footer-tel-item">
+					<div class="footer-tel-label">대표전화</div>
+					<div class="footer-tel">02-6717-4000</div>
+				</div>
+				<div class="footer-tel-item">
+					<div class="footer-tel-label">회원상담센터</div>
+					<div class="footer-tel">1544-7944</div>
+				</div>
+			</div>
+			<div style="margin-top: 4px; font-size: 12px; color: #727a6d; text-align: left; padding-left: 2px;">평일 09:00–18:00 (주말·공휴일 휴무)</div>
+		</div>
+	</div>
+</footer>
+<!-- App Download Floating Banner -->
+<div id="evt-banner" class="fixed bottom-[275px] right-12 z-40 transition-all duration-300 transform translate-y-5 opacity-0 pointer-events-none">
+  <a href="/cmmn/url/appdownevent2026_b_banner_2.gn" class="block w-[200px] hover:scale-105 active:scale-95 transition-all drop-shadow-[0_8px_20px_rgba(0,0,0,0.15)]">
+    <img src="https://cdn.gni.kr/assets/images/26appevent/floating_2.webp" alt="앱다운로드 이벤트 2" class="w-full h-auto object-contain rounded-[12px]"/>
+  </a>
+</div>
+
+<!-- Floating Action Buttons -->
+<div class="fixed bottom-12 right-12 z-50 flex flex-col items-center gap-4">
+  <!-- 1. Donate Floating Button (Circular design matching user reference image) -->
+  <a href="#" class="w-[140px] h-[140px] rounded-full bg-[#8EA837] text-white flex flex-col items-center justify-center shadow-[0_12px_30px_rgba(0,0,0,0.22),0_4px_12px_rgba(0,0,0,0.15)] hover:scale-105 hover:bg-[#7D942E] active:scale-95 transition-all duration-300 group select-none cursor-pointer">
+    <!-- Good Neighbors Logo PNG Inside -->
+    <img src="logo_floating.png" alt="GNI" class="w-16 h-16 object-contain mb-2 filter drop-shadow-[0_2px_4px_rgba(0,0,0,0.15)]"/>
+    <span class="text-[20px] font-extrabold tracking-tight leading-none">후원하기</span>
+  </a>
+
+  <!-- 2. Smooth Scroll To Top Button -->
+  <button onclick="window.scrollTo({top: 0, behavior: 'smooth'})" class="w-[52px] h-[52px] rounded-full bg-white text-on-surface-variant flex items-center justify-center border border-black/5 shadow-[0_8px_20px_rgba(0,0,0,0.15)] hover:bg-[#F4F4F4] hover:scale-105 active:scale-90 transition-all select-none cursor-pointer group" title="위로 가기">
+    <span class="material-symbols-outlined text-[32px] font-medium group-hover:-translate-y-0.5 transition-transform">keyboard_arrow_up</span>
+  </button>
+</div>
+
+<script>
+  let lastScrollY = window.scrollY;
+  const header = document.getElementById('main-header');
+  
+  window.addEventListener('scroll', function() {
+    // 1. App banner scroll check
+    const banner = document.getElementById('evt-banner');
+    if (window.scrollY > 300) {
+      banner.classList.remove('opacity-0', 'translate-y-5', 'pointer-events-none');
+      banner.classList.add('opacity-100', 'translate-y-0', 'pointer-events-auto');
+    } else {
+      banner.classList.remove('opacity-100', 'translate-y-0', 'pointer-events-auto');
+      banner.classList.add('opacity-0', 'translate-y-5', 'pointer-events-none');
+    }
+
+    // 2. Smart header: Hide GNB on scroll down, show on scroll up
+    const currentScrollY = window.scrollY;
+    if (currentScrollY > lastScrollY && currentScrollY > 120) {
+      // Scroll down: Hide GNB
+      header.classList.add('-translate-y-full');
+    } else {
+      // Scroll up or near top: Show GNB
+      header.classList.remove('-translate-y-full');
+    }
+    lastScrollY = currentScrollY;
+  });
+</script>
+
+</body></html>
