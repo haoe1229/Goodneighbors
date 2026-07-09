@@ -1923,11 +1923,11 @@
   <!-- Layout: Left side big card (Highlight), Right side 4 grid items matching layout in reference 1 but content from reference 2 -->
   <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-stretch">
     <!-- Left Big Card (Highlight - Redesigned to match the attachment with gradient background and overlay) -->
-    <div class="lg:col-span-6 relative rounded-[20px] overflow-hidden min-h-[384px] hover:shadow-xl transition-all border border-black/5 flex flex-col justify-between p-8 text-white group">
-      <!-- Background Image -->
-      <div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-105" style="background-image: url('Og0EG6mpL 1.png');"></div>
-      <!-- Gradient Overlay (Green to Transparent/Dark) -->
-      <div class="absolute inset-0 bg-gradient-to-r from-[#8EA837]/90 via-[#8EA837]/45 to-transparent pointer-events-none"></div>
+    <div class="lg:col-span-6 relative rounded-[20px] overflow-hidden min-h-[384px] hover:shadow-xl transition-all border border-black/5 flex flex-col justify-between p-8 text-white group bg-[#8EA837]">
+      <!-- Background Image - shifted to the right, taking up 60% width of the card -->
+      <div class="absolute inset-y-0 right-0 w-[60%] bg-cover bg-center transition-transform duration-500 group-hover:scale-105" style="background-image: url('Og0EG6mpL 1.png'); background-position: 70% center;"></div>
+      <!-- Gradient Overlay (Fade from solid green to transparent to expose the right image area clearly) -->
+      <div class="absolute inset-0 bg-gradient-to-r from-[#8EA837] via-[#8EA837]/90 to-transparent pointer-events-none"></div>
       
       <!-- Top Area: Pill Tag -->
       <div class="relative z-10">
